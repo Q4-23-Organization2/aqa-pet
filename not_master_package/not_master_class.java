@@ -3,5 +3,8 @@ public class not_master_class {
         System.out.println("not_master_package created");
         System.out.println("not_master_package created");
         System.out.println("not_master_package created");
+        System.out.println("not_master_package created");
+        System.out.println("not_master_package created");
+        System.out.println("not_master_package created");
     }
 }
