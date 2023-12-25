@@ -11,10 +11,10 @@ public class Main {
 /*        Scanner scan = new Scanner(System.in);
         System.out.println("Input your number: ");
         int yourNum = scan.nextInt();
-        if (yourNum==0) {
+        if (yourNum == 0) {
             System.out.println("The entered number is zero!");
         }
-        else if (yourNum%2==0) {
+        else if (yourNum %2 == 0) {
             System.out.println(yourNum + " - is Even number");
         } else {
             System.out.println(yourNum + " - is Odd number");
@@ -30,7 +30,7 @@ public class Main {
         //2) за допомогою оператора switch
 
         // 2.1  За допомогою операторів if-else:
-        /*Scanner scan1 = new Scanner(System.in);
+        Scanner scan1 = new Scanner(System.in);
         System.out.println("Chose your month by number from 1 to 12: ");
         int yourMonth = scan1.nextInt();
         if (yourMonth == 1) {
@@ -59,7 +59,7 @@ public class Main {
             System.out.println("DEC");
         } else {
             System.out.println("Not a valid month");
-        }*/
+        }
 
         //        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         //2.2 За допомогою оператора switch:
@@ -127,7 +127,8 @@ public class Main {
 
         //4. Написати програму, яка визначає, чи є трикутник рівнобедреним.
         // Значення сторін трикутника задавати самостійно.
-        Scanner scan4 = new Scanner(System.in);
+
+/*        Scanner scan4 = new Scanner(System.in);
         System.out.println("Enter the length of the first side of the triangle: ");
         int yourFirstSide = scan4.nextInt();
         System.out.println("Enter the length of the second side of the triangle: ");
@@ -142,6 +143,21 @@ public class Main {
                 System.out.println("Isosceles triangle");
         }   else {
             System.out.println("Scalene triangle");
-        }
+        }*/
+
+        //5.Дано рядки різної довжини (довжина - парне число), необхідно повернути її два середні знаки.
+        //Наприклад, якщо даний рядок "Hillel" результат буде "ll", для рядка "Java" результат "av",
+        // для "Hometask" результат "et".
+
+/*        Scanner scan5 = new Scanner(System.in);
+        System.out.println("Enter a string with an even number of characters: ");
+        String yourString = scan5.nextLine();
+        int lengthOfYourString = yourString. length();
+        if (lengthOfYourString %2 != 0) {
+            System.out.println(yourString + " - Your string is of odd length! Enter a string of even length.");
+        } else {
+            System.out.print(yourString.charAt(yourString.length() / 2 - 1));
+            System.out.print(yourString.charAt(yourString.length() / 2));
+        }*/
     }
 }
