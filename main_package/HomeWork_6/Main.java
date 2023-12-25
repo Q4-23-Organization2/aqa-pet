@@ -67,7 +67,7 @@ public class Main {
 
         //2.2 За допомогою оператора switch:
 
-        Scanner scan2 = new Scanner(System.in);
+/*        Scanner scan2 = new Scanner(System.in);
         System.out.println("Chose your month by number from 1 to 12: ");
         int yourMonth2 = scan2.nextInt();
         switch (yourMonth2) {
@@ -109,7 +109,7 @@ public class Main {
                 break;
             default:
                 System.out.println("Not a valid month");
-        }
+        }*/
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -148,7 +148,9 @@ public class Main {
             System.out.println("Isosceles triangle");
         } else if (yourSecondSide==yourThirdSide & yourThirdSide!=yourFirstSide) {
                 System.out.println("Isosceles triangle");
-        }   else {
+        } else if (yourFirstSide!=yourSecondSide & yourFirstSide==yourThirdSide) {
+            System.out.println("Isosceles triangle");
+        } else {
             System.out.println("Scalene triangle");
         }*/
 
