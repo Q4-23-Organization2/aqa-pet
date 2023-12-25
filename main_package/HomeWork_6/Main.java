@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         /*1.Написати програму "CheckOddEven" яка друкує "Odd number", якщо змінна непарна, або "Even number",
         // якщо парна. Перед завершенням роботи програма має друкувати "BYE". Значення змінної можна задати
         // вручну через Scanner або присвоїти початкове значення в коді.*/
@@ -30,7 +31,8 @@ public class Main {
         //2) за допомогою оператора switch
 
         // 2.1  За допомогою операторів if-else:
-        Scanner scan1 = new Scanner(System.in);
+
+        /*Scanner scan1 = new Scanner(System.in);
         System.out.println("Chose your month by number from 1 to 12: ");
         int yourMonth = scan1.nextInt();
         if (yourMonth == 1) {
@@ -59,10 +61,11 @@ public class Main {
             System.out.println("DEC");
         } else {
             System.out.println("Not a valid month");
-        }
+        }*/
 
         //        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         //2.2 За допомогою оператора switch:
+
         /*Scanner scan2 = new Scanner(System.in);
         System.out.println("Chose your month by number from 1 to 12: ");
         int yourMonth2 = scan2.nextInt();
