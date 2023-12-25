@@ -112,7 +112,7 @@ public class Main {
         // прогама повинна надрукувати, що -9 має більше абсолютне значення.
         // Для визначення абсолютного значення можна скористатися методом зі стандратної бібліотеки Math.abs().
 
-        Scanner scan3 = new Scanner(System.in);
+/*        Scanner scan3 = new Scanner(System.in);
         System.out.println("Input your first number: ");
         int yourFirstNum = scan3.nextInt();
         System.out.println("Input your second number: ");
@@ -123,6 +123,25 @@ public class Main {
                 System.out.println("Both numbers entered are zero!!!");
         }   else {
             System.out.println("The number: " + yourSecondNum + " is greater in absolute value");
+        }*/
+
+        //4. Написати програму, яка визначає, чи є трикутник рівнобедреним.
+        // Значення сторін трикутника задавати самостійно.
+        Scanner scan4 = new Scanner(System.in);
+        System.out.println("Enter the length of the first side of the triangle: ");
+        int yourFirstSide = scan4.nextInt();
+        System.out.println("Enter the length of the second side of the triangle: ");
+        int yourSecondSide = scan4.nextInt();
+        System.out.println("Enter the length of the third side of the triangle: ");
+        int yourThirdSide = scan4.nextInt();
+        if (yourFirstSide==yourSecondSide & yourFirstSide==yourThirdSide) {
+            System.out.println("Equilateral triangle");
+        } else if (yourFirstSide==yourSecondSide & yourSecondSide!=yourThirdSide) {
+            System.out.println("Isosceles triangle");
+        } else if (yourSecondSide==yourThirdSide & yourThirdSide!=yourFirstSide) {
+                System.out.println("Isosceles triangle");
+        }   else {
+            System.out.println("Scalene triangle");
         }
     }
 }
