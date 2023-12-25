@@ -8,7 +8,7 @@ public class Main {
         // якщо парна. Перед завершенням роботи програма має друкувати "BYE". Значення змінної можна задати
         // вручну через Scanner або присвоїти початкове значення в коді.*/
 
-        Scanner scan = new Scanner(System.in);
+/*        Scanner scan = new Scanner(System.in);
         System.out.println("Input your number: ");
         int yourNum = scan.nextInt();
         if (yourNum==0) {
@@ -19,7 +19,7 @@ public class Main {
         } else {
             System.out.println(yourNum + " - is Odd number");
         }
-        System.out.println("BYE!!!");
+        System.out.println("BYE!!!");*/
 
 //        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -30,7 +30,7 @@ public class Main {
         //2) за допомогою оператора switch
 
         // 2.1  За допомогою операторів if-else:
-        Scanner scan1 = new Scanner(System.in);
+        /*Scanner scan1 = new Scanner(System.in);
         System.out.println("Chose your month by number from 1 to 12: ");
         int yourMonth = scan1.nextInt();
         if (yourMonth == 1) {
@@ -59,11 +59,11 @@ public class Main {
             System.out.println("DEC");
         } else {
             System.out.println("Not a valid month");
-        }
+        }*/
 
         //        +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         //2.2 За допомогою оператора switch:
-        Scanner scan2 = new Scanner(System.in);
+        /*Scanner scan2 = new Scanner(System.in);
         System.out.println("Chose your month by number from 1 to 12: ");
         int yourMonth2 = scan2.nextInt();
         switch (yourMonth2) {
@@ -105,17 +105,24 @@ public class Main {
                 break;
             default:
                 System.out.println("Not a valid month");
+        }*/
+
+
+        //3. Написати програму, яка буде порівнювати абсолютні значення двох чисел. Наприклад, для чисел 3 та -9
+        // прогама повинна надрукувати, що -9 має більше абсолютне значення.
+        // Для визначення абсолютного значення можна скористатися методом зі стандратної бібліотеки Math.abs().
+
+        Scanner scan3 = new Scanner(System.in);
+        System.out.println("Input your first number: ");
+        int yourFirstNum = scan3.nextInt();
+        System.out.println("Input your second number: ");
+        int yourSecondNum = scan3.nextInt();
+        if (Math.abs(yourFirstNum)>Math.abs(yourSecondNum)) {
+            System.out.println("The number: " + yourFirstNum + " is greater in absolute value");
+        } else if (Math.abs(yourFirstNum)==0 & Math.abs(yourSecondNum)==0) {
+                System.out.println("Both numbers entered are zero!!!");
+        }   else {
+            System.out.println("The number: " + yourSecondNum + " is greater in absolute value");
         }
-
-
-
-
-//        String Str = new String("Добро пожаловать на ProgLang.su");
-//
-//        System.out.print("Возвращаемое значение: ");
-//        System.out.println(Str.substring(6));
-//
-//        System.out.print("Возвращаемое значение: ");
-//        System.out.println(Str.substring((args.length-1), 15));
     }
 }
