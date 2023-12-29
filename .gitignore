@@ -23,6 +23,8 @@
 .main_package/
 .master_package/
 .not_master_package/
+.out/
+
 
 
 
