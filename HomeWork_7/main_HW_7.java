@@ -10,7 +10,7 @@ public class main_HW_7 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the length of your array: ");
         int arrayLength = input.nextInt();
-        int arrayOfNum[] = new int[arrayLength];
+        int[] arrayOfNum = new int[arrayLength];
         System.out.println("Insert your numbers: ");
 //        Пройдёмся по всему массиву, заполняя его
         for (int i = 0; i < arrayLength; i++) {
