@@ -24,8 +24,15 @@ public class main_HW_7 {
         }
         System.out.println("Max number of array is: " + maxArrayNum);
 
-        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        int minArrayNum = arrayOfNum[0];
+        for (int i = 0; i < arrayLength; i++) {
+            if (arrayOfNum[i] < minArrayNum) {
+                minArrayNum = arrayOfNum[i];
+            }
+        }
+        System.out.println("Min number of array is: " + minArrayNum);
 
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     }
 }
 
