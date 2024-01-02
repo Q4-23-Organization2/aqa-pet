@@ -1,6 +1,5 @@
 package HomeWork_7;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class main_HW_7 {
