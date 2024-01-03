@@ -5,7 +5,10 @@ import java.util.Scanner;
 public class main_HW_7 {
     public static void main(String[] args) {
 
-        //2. Написати програму, яка знаходить мінімальне і максимальне число в масиві.
+        // 1. Написати програму, яка перевіряє чи є рядок паліндромом (використовувати масив символів - char string[].
+        // Для конвертації рядка, використовувати метод toCharArray())
+
+        // 2. Написати програму, яка знаходить мінімальне і максимальне число в масиві.
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the length of your array: ");
@@ -15,7 +18,6 @@ public class main_HW_7 {
         } else {
             int[] arrayOfNum = new int[arrayLength];
             System.out.println("Insert your numbers: ");
-            //        Пройдёмся по всему массиву, заполняя его
             for (int i = 0; i < arrayLength; i++) {
                 arrayOfNum[i] = input.nextInt();
             }
@@ -36,6 +38,13 @@ public class main_HW_7 {
             System.out.println("Min number of array is: " + minArrayNum);
         }
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        // 3. Написати програму, яка в масиві з випадкових цілих чисел замінює всі парні числа на 0,
+        // і виводить отриманий масив на екран.
+
+
+
+
     }
 }
 
