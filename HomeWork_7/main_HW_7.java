@@ -9,10 +9,10 @@ public class main_HW_7 {
         // Для конвертації рядка, використовувати метод toCharArray())
 
         String str = "level";
-        char[] string = str.toCharArray();
         String result = "Palindrome";
-        for (int i = 0; i < string.length / 2; i++) {
-            if (string[i] != string[string.length - 1 - i]) {
+        char[] strng = str.toCharArray();
+        for (int i = 0; i < strng.length / 2; i++) {
+            if (strng[i] != strng[strng.length - 1 - i]) {
                 result = "Not Palindrome!";
                 break;
             }
@@ -94,6 +94,40 @@ public class main_HW_7 {
         for (int i = 0; i <= arraySinX.length; i+=10) {
             System.out.println("[sin(x)" + i + "°] = [" + Math.sin(i) + "]");
         }
+
+        System.out.println("4.)++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        int count = 0;
+        int sum = 0;
+
+        int[][] initArray = {
+                {
+                        1, -2, 3, 4
+                },
+                {
+                        -1, 2, 3, 4
+                },
+                {
+                        1, 20, 3, 4
+                },
+                {
+                        1, -2, 3, 414
+                }
+        };
+
+        for (int i = 0; i < initArray.length; i++) {
+            for (int j = 0; j < initArray.length; j++) {
+                if (i > j && initArray[i][j] < 0) {
+                    count++;
+                }
+                if (i < j && initArray[i][j] % 2 != 0) {
+                    sum += initArray[i][j];
+                }
+            }
+        }
+
+        System.out.println("Count: " + count);
+        System.out.println("sum: " + sum);
     }
 }
 
