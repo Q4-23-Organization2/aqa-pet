@@ -8,14 +8,20 @@ public class main_HW_7 {
         // 1. Написати програму, яка перевіряє чи є рядок паліндромом (використовувати масив символів - char string[].
         // Для конвертації рядка, використовувати метод toCharArray())
 
-        String str = "level";
+        String str = "арозаупаланвалапуазора";
         String result = "Palindrome";
         char[] strng = str.toCharArray();
+        for (int i=0; i<strng.length; i++) {
+            System.out.println("Element № [" + i + "] - " + "[" + strng[i] + "]");
+        }
+        System.out.println( "String Length = " + strng.length);
         for (int i = 0; i < strng.length / 2; i++) {
             if (strng[i] != strng[strng.length - 1 - i]) {
                 result = "Not Palindrome!";
+                System.out.println("[" + strng[i] + "] != [" + strng[strng.length - 1 - i] + "]");
                 break;
             }
+            System.out.println("[" + strng[i] + "] = [" + strng[strng.length - 1 - i] + "]");
         }
         System.out.println(result);
 
