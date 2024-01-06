@@ -91,49 +91,20 @@ public class main_HW_7 {
 
             }
         }
+
         System.out.println("3.)++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
         //4. Написати програму, яка друкує таблицю значень sin(x),
         // де х - від 0 до 360 з кроком 10.(значення мають бути записані в масив за допомогою циклу)
 
-        double[] arraySinX = new double[360];
-        for (int i = 0; i <= arraySinX.length; i+=10) {
-            System.out.println("[sin(x)" + i + "°] = [" + Math.sin(i) + "]");
+        int[] arraySinX = new int[360 / 10 + 1];
+        for (int i = 0; i < arraySinX.length; i++) {
+            arraySinX[i] = i * 10;
+            System.out.println("Синус угла :" + arraySinX[i] + "° = " + Math.sin(arraySinX[i]));
         }
 
         System.out.println("4.)++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
-        int count = 0;
-        int sum = 0;
-
-        int[][] initArray = {
-                {
-                        1, -2, 3, 4
-                },
-                {
-                        -1, 2, 3, 4
-                },
-                {
-                        1, 20, 3, 4
-                },
-                {
-                        1, -2, 3, 414
-                }
-        };
-
-        for (int i = 0; i < initArray.length; i++) {
-            for (int j = 0; j < initArray.length; j++) {
-                if (i > j && initArray[i][j] < 0) {
-                    count++;
-                }
-                if (i < j && initArray[i][j] % 2 != 0) {
-                    sum += initArray[i][j];
-                }
-            }
-        }
-
-        System.out.println("Count: " + count);
-        System.out.println("sum: " + sum);
     }
 }
 
