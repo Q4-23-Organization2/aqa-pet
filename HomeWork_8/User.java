@@ -12,11 +12,18 @@ public class User {
     }
 
     public void setUserAge(int age) {
-        userAge = age;
-    }
+            userAge = age;
+        }
 
     public void setUserPassword(String password) {
-        userPassword = password;
+        if (password.length() < 8) {
+            System.out.println("The password length of user " + userName + " is less than the minimum allowed value!");
+        } else if (password.length() >= 25) {
+            System.out.println("The password length of user " + userName + " exceeds the maximum allowed value!");
+        }
+        else {
+            userPassword = password;
+        }
     }
 
     public void printUserName() {

@@ -10,7 +10,7 @@ public class Main {
         User secondUser = new User();
         secondUser.userName = "Yulia";
         secondUser.setUserAge(41);
-        secondUser.setUserPassword("2wsx@@WWSSXX");
+        secondUser.setUserPassword("2X");
 
         User thirdUser = new User();
         thirdUser.userName = "Igor";
@@ -20,7 +20,7 @@ public class Main {
         User fourthUser = new User();
         fourthUser.userName = "Oleg";
         fourthUser.setUserAge(8);
-        fourthUser.setUserPassword("4rfv$$RRFFVV");
+        fourthUser.setUserPassword("4rfv$$RRFFVV4rfv$$RRFFVV4rfv$$RRFFVV");
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
 
