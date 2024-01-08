@@ -3,16 +3,16 @@ package HomeWork_8;
 public class Main {
     public static void main(String[] args) {
         User firstUser = new User();
-        firstUser.userName = "Stanislav";
+        firstUser.setUserName("Stanislav");
 
         User secondUser = new User();
-        secondUser.userName = "Yulia";
+        secondUser.setUserName("Yulia");
 
         User thirdUser = new User();
-        thirdUser.userName = "Igor";
+        thirdUser.setUserName("Igor");
 
         User fourthUser = new User();
-        fourthUser.userName = "Oleg";
+        fourthUser.setUserName("Oleg");
 
         firstUser.printUserName();
         secondUser.printUserName();

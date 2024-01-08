@@ -1,7 +1,7 @@
 package HomeWork_8;
 
 public class User {
-    public String userName;
+    private String userName;
     public String email;
     public int amountSpentMoney;
     public boolean isActive;
@@ -9,11 +9,14 @@ public class User {
     private int password;
 
     public  User () {
+    }
 
+    public void setUserName(String name) {
+        userName = name;
     }
 
     public void printUserName() {
-        System.out.println("The users name is: " + userName);
+        System.out.println("The user's name is: " + userName);
     }
 
     public void makePurchase() {
