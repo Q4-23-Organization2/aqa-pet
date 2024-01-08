@@ -12,6 +12,10 @@ public class User {
 
     }
 
+    public void printUserName() {
+        System.out.println("The users name is: " + userName);
+    }
+
     public void makePurchase() {
         System.out.println("Purchase value is: ");
     }
