@@ -12,8 +12,14 @@ public class User {
     }
 
     public void setUserAge(int age) {
+        if (age < 18) {
+            System.out.println("The " + userName + " age is less than the minimum allowed!");
+        } else if (age >= 90) {
+            System.out.println("The " + userName + " age is greater than the maximum allowed!");
+        } else {
             userAge = age;
         }
+    }
 
     public void setUserPassword(String password) {
         if (password.length() < 8) {

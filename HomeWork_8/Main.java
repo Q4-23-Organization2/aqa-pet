@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         User firstUser = new User();
         firstUser.userName = "Stanislav";
-        firstUser.setUserAge(42);
+        firstUser.setUserAge(92);
         firstUser.setUserPassword("1qaz!!QQAAZZ");
 
         User secondUser = new User();
