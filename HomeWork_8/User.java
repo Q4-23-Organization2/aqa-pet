@@ -1,34 +1,51 @@
 package HomeWork_8;
 
+import org.jetbrains.annotations.NotNull;
+
 public class User {
     public String userName;
     public String email;
     public int amountSpentMoney;
     public boolean isActive;
-    private int userAge;
-    private String  userPassword;
+    private int age;
+    private String  password;
 
     public  User () {
     }
 
-    public void setUserAge(int age) {
-        if (age < 18) {
+    public  User (String userName) {
+        this.userName = userName;
+    }
+
+    public  User (String userName, int age) {
+        this.userName = userName;
+        setUserAge(age);
+    }
+
+    public  User (String userName, int age, String password) {
+        this.userName = userName;
+        setUserAge(age);
+        setUserPassword(password);
+    }
+
+    public void setUserAge(int newUserAge) {
+        if (newUserAge < 18) {
             System.out.println("The " + userName + " age is less than the minimum allowed!");
-        } else if (age >= 90) {
+        } else if (newUserAge >= 90) {
             System.out.println("The " + userName + " age is greater than the maximum allowed!");
         } else {
-            userAge = age;
+            age = newUserAge;
         }
     }
 
-    public void setUserPassword(String password) {
-        if (password.length() < 8) {
+    public void setUserPassword(String newPassword) {
+        if (newPassword.length() < 8) {
             System.out.println("The password length of user " + userName + " is less than the minimum allowed value!");
-        } else if (password.length() >= 25) {
+        } else if (newPassword.length() >= 25) {
             System.out.println("The password length of user " + userName + " exceeds the maximum allowed value!");
         }
         else {
-            userPassword = password;
+            password = newPassword;
         }
     }
 
@@ -37,11 +54,11 @@ public class User {
     }
 
     public void printUserAge() {
-        System.out.println("The user's age is: " + userAge);
+        System.out.println("The user's age is: " + age);
     }
 
     public void printUserPassword() {
-        System.out.println("The user's password is: " + userPassword);
+        System.out.println("The user's password is: " + password);
     }
 
     public void makePurchase() {

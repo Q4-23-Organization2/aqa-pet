@@ -2,20 +2,14 @@ package HomeWork_8;
 
 public class Main {
     public static void main(String[] args) {
-        User firstUser = new User();
-        firstUser.userName = "Stanislav";
-        firstUser.setUserAge(92);
+        User firstUser = new User("Stanislav");
+        firstUser.setUserAge(90);
         firstUser.setUserPassword("1qaz!!QQAAZZ");
 
-        User secondUser = new User();
-        secondUser.userName = "Yulia";
-        secondUser.setUserAge(41);
+        User secondUser = new User("Yulia", 41);
         secondUser.setUserPassword("2X");
 
-        User thirdUser = new User();
-        thirdUser.userName = "Igor";
-        thirdUser.setUserAge(13);
-        thirdUser.setUserPassword("3edc##EEDDCC");
+        User thirdUser = new User("Igor", 13, "3edc##EEDDCC");
 
         User fourthUser = new User();
         fourthUser.userName = "Oleg";
