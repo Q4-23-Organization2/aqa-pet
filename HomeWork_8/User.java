@@ -64,11 +64,12 @@ public class User {
         System.out.println("The user's password is: " + password);
     }
 
+    public void printMakePurchase() {
+        System.out.println("Purchase price is: " + purchasePrice);
+    }
+
     public void makePurchase(double purchasePrice) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Make your purchase: ");
-        double price = scan.nextDouble();
-        System.out.println("Purchase value is: " + price);
+        System.out.println("Purchase price is: " + purchasePrice);
     }
 
     public void printTotalAmountOfSpentMoney() {

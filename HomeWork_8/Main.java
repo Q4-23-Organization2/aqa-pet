@@ -15,6 +15,7 @@ public class Main {
         fourthUser.userName = "Oleg";
         fourthUser.setUserAge(8);
         fourthUser.setUserPassword("4rfv$$RRFFVV4rfv$$RRFFVV4rfv$$RRFFVV");
+        fourthUser.purchasePrice = 5.654;
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
 
@@ -39,5 +40,6 @@ public class Main {
         fourthUser.printUserName();
         fourthUser.printUserAge();
         fourthUser.printUserPassword();
+        fourthUser.printMakePurchase();
     }
 }
