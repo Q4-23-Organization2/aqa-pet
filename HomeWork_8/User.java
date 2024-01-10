@@ -7,6 +7,7 @@ public class User {
     public String email;
     public double purchasePrice = 0;
     public double amountSpentMoney = 0;
+    public double TotalAmountOfSpentMoney =0;
     public boolean isActive;
     private int age;
     private String  password;
@@ -68,11 +69,14 @@ public class User {
         System.out.println("Purchase price is: " + purchasePrice);
     }
 
-    public void makePurchase(double purchasePrice) {
-        System.out.println("Purchase price is: " + purchasePrice);
+    public void printTotalAmountOfSpentMoney() {
+        double TotalAmountOfSpentMoney = makePurchase();
+        System.out.println("Total Amount Of Spent Money is: " + makePurchase());
     }
 
-    public void printTotalAmountOfSpentMoney() {
-        System.out.println("Purchase value is: ");
+    public double makePurchase() {
+        purchasePrice += purchasePrice;
+        System.out.println("Purchase price is: " + purchasePrice);
+        return purchasePrice;
     }
 }
