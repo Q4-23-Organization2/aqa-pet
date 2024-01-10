@@ -1,11 +1,12 @@
 package HomeWork_8;
 
 import org.jetbrains.annotations.NotNull;
-
+import java.util.Scanner;
 public class User {
     public String userName;
     public String email;
-    public int amountSpentMoney;
+    public double purchasePrice = 0;
+    public double amountSpentMoney = 0;
     public boolean isActive;
     private int age;
     private String  password;
@@ -14,6 +15,7 @@ public class User {
     }
 
     public  User (String userName) {
+
         this.userName = userName;
     }
 
@@ -27,6 +29,7 @@ public class User {
         setUserAge(age);
         setUserPassword(password);
     }
+
 
     public void setUserAge(int newUserAge) {
         if (newUserAge < 18) {
@@ -61,8 +64,11 @@ public class User {
         System.out.println("The user's password is: " + password);
     }
 
-    public void makePurchase() {
-        System.out.println("Purchase value is: ");
+    public void makePurchase(double purchasePrice) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Make your purchase: ");
+        double price = scan.nextDouble();
+        System.out.println("Purchase value is: " + price);
     }
 
     public void printTotalAmountOfSpentMoney() {
