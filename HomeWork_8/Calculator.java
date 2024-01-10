@@ -1,13 +1,18 @@
 package HomeWork_8;
 
 public class Calculator {
-    public static double a = 56.923;
-    public static double b = 14.22;
+    public static double a;
+    public static double b;
 
-    public static void addition () {
+    public Calculator (double a, double b) {
+        Calculator.a = a;
+        Calculator.b = b;
+    }
+
+    public static void additionOperation () {
         System.out.println("The sum of the addition is: " + (a + b));
     }
-    public static void subtraction () {
+    public static void subtractionOperation () {
         System.out.println("The sum of the addition is: " + (a - b));
     }
     public static void multiplicationOperation () {
