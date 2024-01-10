@@ -1,6 +1,6 @@
 package HomeWork_8;
 
-public class Main {
+public class MainUser {
     public static void main(String[] args) {
         User firstUser = new User("Stanislav");
         firstUser.setUserAge(90);
