@@ -20,14 +20,11 @@ public class MainUser {
         fourthUser.setUserPassword("4rfv$$RRFFVV4rfv$$RRFFVV4rfv$$RRFFVV");
         fourthUser.purchasePrice = 5.654;
 
-        User totalSpent = new User();
-        totalSpent.makePurchase();
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
-
         firstUser.printUserName();
         firstUser.printUserAge();
         firstUser.printUserPassword();
         firstUser.printMakePurchase();
+        firstUser.printTotalAmountOfSpentMoney();
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
 
@@ -35,6 +32,7 @@ public class MainUser {
         secondUser.printUserAge();
         secondUser.printUserPassword();
         secondUser.printMakePurchase();
+        secondUser.printTotalAmountOfSpentMoney();
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
 
@@ -42,6 +40,7 @@ public class MainUser {
         thirdUser.printUserAge();
         thirdUser.printUserPassword();
         thirdUser.printMakePurchase();
+        thirdUser.printTotalAmountOfSpentMoney();
 
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
 
@@ -49,7 +48,6 @@ public class MainUser {
         fourthUser.printUserAge();
         fourthUser.printUserPassword();
         fourthUser.printMakePurchase();
-
-        totalSpent.printTotalAmountOfSpentMoney();
+        fourthUser.printTotalAmountOfSpentMoney();
     }
 }

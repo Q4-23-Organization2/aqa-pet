@@ -1,15 +1,20 @@
 package HomeWork_8;
 
+import java.util.Scanner;
 public class Calculator {
     public static double a;
     public static double b;
 
-    public Calculator (double a, double b) {
-        Calculator.a = a;
-        Calculator.b = b;
-    }
-
     public static void additionOperation () {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Input your first number: ");
+        double yourFirstNum;
+        yourFirstNum = scan.nextDouble();
+        a = yourFirstNum;
+        System.out.println("Input your second number: ");
+        double yourSecondNum;
+        yourSecondNum = scan.nextDouble();
+        b = yourSecondNum;
         System.out.println("The sum of the addition is: " + (a + b));
     }
     public static void subtractionOperation () {

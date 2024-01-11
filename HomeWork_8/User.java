@@ -66,7 +66,7 @@ public class User {
     }
 
     public void printMakePurchase() {
-        System.out.println("Purchase price is: " + purchasePrice);
+        System.out.println("Purchase price is: " + makePurchase());
     }
 
     public void printTotalAmountOfSpentMoney() {
@@ -75,8 +75,17 @@ public class User {
     }
 
     public double makePurchase() {
-        purchasePrice += purchasePrice;
-        System.out.println("Purchase price is: " + purchasePrice);
+        Scanner inputCount = new Scanner(System.in);
+        System.out.println("Enter the number of purchases: ");
+        int purchaseCount = inputCount.nextInt();
+            double[] purchaseArray = new double[purchaseCount];
+            System.out.println("Enter purchase amounts: ");
+            for (int i = 0; i < purchaseCount; i++) {
+                purchaseArray[i] = inputCount.nextDouble();
+                System.out.println("Purchase price is: " + purchaseArray[i]);
+                purchasePrice += purchaseArray[i];
+            }
+        System.out.println("Total Purchase price is: " + purchasePrice);
         return purchasePrice;
     }
 }
