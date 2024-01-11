@@ -1,6 +1,5 @@
 package HomeWork_8;
 
-import org.jetbrains.annotations.NotNull;
 import java.util.Scanner;
 public class User {
     public String userName;
@@ -78,14 +77,14 @@ public class User {
         Scanner inputCount = new Scanner(System.in);
         System.out.println("Enter the number of purchases: ");
         int purchaseCount = inputCount.nextInt();
-            double[] purchaseArray = new double[purchaseCount];
+            double[] purchasePrice = new double[purchaseCount];
             System.out.println("Enter purchase amounts: ");
             for (int i = 0; i < purchaseCount; i++) {
-                purchaseArray[i] = inputCount.nextDouble();
-                System.out.println("Purchase price is: " + purchaseArray[i]);
-                purchasePrice += purchaseArray[i];
+                purchasePrice[i] = inputCount.nextDouble();
+                System.out.println("Purchase price is: " + purchasePrice[i]);
+                amountSpentMoney += purchasePrice[i];
             }
-        System.out.println("Total Purchase price is: " + purchasePrice);
-        return purchasePrice;
+        System.out.println("Total Purchase price is: " + amountSpentMoney);
+        return amountSpentMoney;
     }
 }
