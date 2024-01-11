@@ -14,17 +14,16 @@ public class User {
     }
 
     public  User (String userName) {
-
         this.userName = userName;
     }
 
     public  User (String userName, int age) {
-        this.userName = userName;
+        this(userName);
         setUserAge(age);
     }
 
     public  User (String userName, int age, String password) {
-        this.userName = userName;
+        this(userName);
         setUserAge(age);
         setUserPassword(password);
     }
