@@ -6,7 +6,6 @@ public class User {
     public String email;
     public double purchasePrice = 0;
     public double amountSpentMoney = 0;
-    public double TotalAmountOfSpentMoney =0;
     public boolean isActive;
     private int age;
     private String  password;
@@ -69,7 +68,7 @@ public class User {
     }
 
     public void printTotalAmountOfSpentMoney() {
-        double TotalAmountOfSpentMoney = makePurchase();
+        makePurchase();
         System.out.println("Total Amount Of Spent Money is: " + makePurchase());
     }
 
