@@ -8,6 +8,6 @@ public class ProgrammerCalculator extends Calculators {
         System.out.println(Calculators.subtractionOperation(56.88965, 12.55157));
         System.out.println(Calculators.multiplicationOperation(56.88965, 12.55157));
         System.out.println(Calculators.divisionOperation(56.88965, 12.55157));
-        System.out.println(programmerCalculation(8));
+        System.out.println(programmerCalculation(1024));
     }
 }
