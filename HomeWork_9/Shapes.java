@@ -1,7 +1,19 @@
 package HomeWork_9;
 
+import java.util.Scanner;
+
+import static java.awt.Color.blue;
+import static java.awt.Color.getColor;
+
 public class Shapes {
-    public static void main(String[] args) {
+
+    protected String  color;
+
+    protected void calculateArea() {
+
+    }
+    protected void calculatePerimeter() {
 
     }
 }
+
