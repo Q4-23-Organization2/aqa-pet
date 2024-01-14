@@ -1,7 +1,6 @@
 package HomeWork_9;
 
 public class ProgrammerCalculator extends Calculators {
-    private String programmerCalculation;
     public static String programmerCalculation(int binary) {
         return Integer.toString(binary, 2); }
     public static void main(String[] args) {
