@@ -1,4 +1,4 @@
-package HomeWork_8;
+package HomeWork_8.Calculator;
 
 import java.util.Scanner;
 public class Calculator {

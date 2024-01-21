@@ -1,4 +1,4 @@
-package HomeWork_8;
+package HomeWork_8.User;
 
 import java.util.Scanner;
 public class User {
@@ -63,26 +63,26 @@ public class User {
     }
 
     public void printMakePurchase() {
-        System.out.println("Purchase price is: " + makePurchase());
+        System.out.println("Purchase price is: " + makePurchase(purchasePrice));
     }
 
     public void printTotalAmountOfSpentMoney() {
-        makePurchase();
-        System.out.println("Total Amount Of Spent Money is: " + makePurchase());
+        makePurchase(purchasePrice);
+        System.out.println("Total Amount Of Spent Money is: " + makePurchase(purchasePrice));
     }
 
-    public double makePurchase() {
+    public double makePurchase(double purchasePrice) {
         Scanner inputCount = new Scanner(System.in);
         System.out.println("Enter the number of purchases: ");
         int purchaseCount = inputCount.nextInt();
-            double[] purchasePrice = new double[purchaseCount];
+            double[] purchase = new double[purchaseCount];
             System.out.println("Enter purchase amounts: ");
             for (int i = 0; i < purchaseCount; i++) {
-                purchasePrice[i] = inputCount.nextDouble();
-                System.out.println("Purchase price is: " + purchasePrice[i]);
-                amountSpentMoney += purchasePrice[i];
+                purchase[i] = inputCount.nextDouble();
+                System.out.println("Purchase price is: " + purchase[i]);
+                purchasePrice += purchase[i];
             }
-        System.out.println("Total Purchase price is: " + amountSpentMoney);
-        return amountSpentMoney;
+        System.out.println("Total Purchase price is: " + purchasePrice);
+        return purchasePrice;
     }
 }

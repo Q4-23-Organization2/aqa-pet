@@ -1,4 +1,4 @@
-package HomeWork_8;
+package HomeWork_8.User;
 
 public class MainUser {
     public static void main(String[] args) {
