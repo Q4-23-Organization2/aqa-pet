@@ -3,7 +3,7 @@ package HomeWork_9.Shapes;
 import java.util.Objects;
 
 public class Shapes {
-    private String color;
+    private final String color;
 
     public Shapes(String color) {
         this.color = color;

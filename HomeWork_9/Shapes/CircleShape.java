@@ -3,7 +3,7 @@ package HomeWork_9.Shapes;
 import java.util.Objects;
 
 public class CircleShape extends Shapes {
-    private double circleRadius;
+    private final double circleRadius;
 
     public CircleShape(String color, double circleRadius) {
         super(color);

@@ -3,9 +3,9 @@ package HomeWork_9.Shapes;
 import java.util.Objects;
 
 public class TriangleShape extends Shapes {
-    private double sideA;
-    private double sideB;
-    private double sideC;
+    private final double sideA;
+    private final double sideB;
+    private final double sideC;
 
     public TriangleShape(String color, double sideA, double sideB, double sideC) {
         super(color);

@@ -3,8 +3,8 @@ package HomeWork_9.Shapes;
 import java.util.Objects;
 
 public class RectangleShape extends Shapes {
-    private double rectangleLength;
-    private double rectangleWidth;
+    private final double rectangleLength;
+    private final double rectangleWidth;
 
     public RectangleShape(String color, double rectangleLength, double rectangleWidth) {
         super(color);
