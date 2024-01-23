@@ -9,9 +9,9 @@ abstract class Shapes {
         this.color = color;
     }
 
-    public abstract double calculateArea();
-
     public abstract double calculatePerimeter();
+
+    public abstract double calculateArea();
 
     public void paint () {
         System.out.println("Color of this shape is: " + color);
