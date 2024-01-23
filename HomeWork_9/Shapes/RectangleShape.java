@@ -13,13 +13,13 @@ public class RectangleShape extends Shapes {
     }
 
     @Override
-    protected double calculateArea() {
-        return rectangleLength * rectangleWidth;
+    protected double calculatePerimeter() {
+        return 2 * (rectangleLength + rectangleWidth);
     }
 
     @Override
-    protected double calculatePerimeter() {
-        return 2 * (rectangleLength + rectangleWidth);
+    protected double calculateArea() {
+        return rectangleLength * rectangleWidth;
     }
 
     @Override
