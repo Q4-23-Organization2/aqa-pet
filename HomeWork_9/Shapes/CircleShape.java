@@ -1,22 +1,43 @@
 package HomeWork_9.Shapes;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class CircleShape extends Shapes {
-    public CircleShape() {
-        super();
+    private double circleRadius;
+
+    public CircleShape(String color, double circleRadius) {
+        super(color);
+        this.circleRadius = circleRadius;
     }
 
-    public static void main(String[] args)
-    {
-        Scanner crCir = new Scanner(System.in);
-        System.out.print("Enter the radius of the circle: ");
-        double radius = crCir.nextDouble();
-        //Площадь круга вычисляется по формуле = PI*radius*radius
-        double area = Math.PI * (radius * radius);
-        System.out.println("The area of the circle is: " + area);
-        //Длины окружности вычисляется по формуле = 2*PI*radius
-        double circumference= Math.PI * 2*radius;
-        System.out.println("The circumference is equal to: " + circumference) ;
+    @Override
+    protected double calculatePerimeter() {
+        return 2 * Math.PI * circleRadius;
+    }
+
+    @Override
+    protected double calculateArea() {
+        return Math.PI * circleRadius * circleRadius;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CircleShape that)) return false;
+        if (!super.equals(o)) return false;
+        return Double.compare(circleRadius, that.circleRadius) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), circleRadius);
+    }
+
+    @Override
+    public String toString() {
+        return "CircleShape{" +
+                "circleRadius=" + circleRadius +
+                "} " + super.toString();
     }
 }
