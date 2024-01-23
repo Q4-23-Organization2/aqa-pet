@@ -1,4 +1,4 @@
-package HomeWork_9;
+package HomeWork_9.Calculators;
 
 public class Calculators {
     public static double additionOperation(double firstOperand, double secondOperand) {

@@ -1,8 +1,12 @@
-package HomeWork_9;
+package HomeWork_9.Shapes;
 
 import java.util.Scanner;
 
 public class CircleShape extends Shapes {
+    public CircleShape() {
+        super();
+    }
+
     public static void main(String[] args)
     {
         Scanner crCir = new Scanner(System.in);

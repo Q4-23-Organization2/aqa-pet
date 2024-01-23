@@ -1,8 +1,12 @@
-package HomeWork_9;
+package HomeWork_9.Shapes;
 
 public class TriangleShape extends Shapes {
+    public TriangleShape() {
+        super();
+    }
+
     @Override
-    protected void calculatePerimeter() {
+    protected double calculatePerimeter() {
         System.out.println("Triangle");
     }
     public static void main(String[] args) {
