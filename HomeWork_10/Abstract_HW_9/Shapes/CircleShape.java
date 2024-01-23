@@ -2,10 +2,10 @@ package HomeWork_10.Abstract_HW_9.Shapes;
 
 import java.util.Objects;
 
-class Circle extends Shapes {
+class CircleShape extends Shapes {
     private final double circleRadius;
 
-    public Circle(String color, double radius) {
+    public CircleShape(String color, double radius) {
         super(color);
         this.circleRadius = radius;
     }
@@ -23,9 +23,9 @@ class Circle extends Shapes {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Circle circle)) return false;
+        if (!(o instanceof CircleShape that)) return false;
         if (!super.equals(o)) return false;
-        return Double.compare(circleRadius, circle.circleRadius) == 0;
+        return Double.compare(circleRadius, that.circleRadius) == 0;
     }
 
     @Override
@@ -35,7 +35,7 @@ class Circle extends Shapes {
 
     @Override
     public String toString() {
-        return "Circle{" +
+        return "CircleShape{" +
                 "circleRadius=" + circleRadius +
                 "} " + super.toString();
     }
