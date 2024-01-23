@@ -37,6 +37,7 @@ class CircleShape extends Shapes {
     public String toString() {
         return "CircleShape{" +
                 "circleRadius=" + circleRadius +
+                ", color='" + color + '\'' +
                 "} " + super.toString();
     }
 }
