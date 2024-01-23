@@ -17,7 +17,7 @@ public class Shapes {
     }
 
     protected void paint () {
-        System.out.println("Color of the shape is: " + color);
+        System.out.println("Color of this shape is: " + color);
     }
 
     @Override
