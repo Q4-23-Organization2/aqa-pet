@@ -1,7 +1,6 @@
 package HomeWork_9.Shapes;
 
 import java.util.Objects;
-import java.util.Scanner;
 
 public class CircleShape extends Shapes {
     private double circleRadius;
