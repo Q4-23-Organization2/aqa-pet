@@ -14,12 +14,12 @@ abstract class MobilePhone implements Mobile {
     public abstract void makeScreenShot();
 
     @Override
-    public void makeCall(int phoneNumber) {
+    public void makeCall(String phoneNumber) {
         System.out.println(mobileBrand + " calls the number: " + phoneNumber);
     }
 
     @Override
-    public void sendSMS(int phoneNumber, String textMessage) {
+    public void sendSMS(String phoneNumber, String textMessage) {
         System.out.println(mobileBrand + " sending SMS to: " + phoneNumber + " . Message text is: " + textMessage);
     }
 }
