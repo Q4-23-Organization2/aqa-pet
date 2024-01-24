@@ -15,5 +15,6 @@ public class MainPrint {
 
         // Вызов статического метода для вывода названий только журналов
         Magazine.printMagazines(printables);
+        Book.printBooks(printables);
     }
 }
