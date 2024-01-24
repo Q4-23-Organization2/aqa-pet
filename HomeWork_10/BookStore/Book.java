@@ -1,7 +1,7 @@
 package HomeWork_10.BookStore;
 
 class Book implements Printable {
-    private String bookTitle;
+    private final String bookTitle;
 
     public Book(String bookTitle) {
         this.bookTitle = bookTitle;

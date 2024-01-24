@@ -1,7 +1,7 @@
 package HomeWork_10.BookStore;
 
 class Magazine implements Printable {
-    private String magazineTitle;
+    private final String magazineTitle;
 
     public Magazine(String magazineTitle) {
         this.magazineTitle = magazineTitle;
