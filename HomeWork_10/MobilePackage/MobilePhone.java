@@ -3,12 +3,8 @@ package HomeWork_10.MobilePackage;
 abstract class MobilePhone implements Mobile {
     private final String mobileBrand;
 
-    MobilePhone(String mobileBrand) {
+    public MobilePhone(String mobileBrand) {
         this.mobileBrand = mobileBrand;
-    }
-    public String getMobileBrand () {
-
-        return getMobileBrand();
     }
 
     public abstract void makeScreenShot();
