@@ -1,19 +1,19 @@
 package HomeWork_10.BookStore;
 
 class Book implements Printable {
-    private String title;
+    private String bookTitle;
 
     public Book(String bookTitle) {
-        this.title = bookTitle;
+        this.bookTitle = bookTitle;
     }
 
     @Override
     public void print() {
-        System.out.println("The book title is: " + title);
+        System.out.println("The book title is: " + bookTitle);
     }
 
     public static void printBooks(Printable[] bookPrints) {
-        System.out.println("Books:");
+        System.out.println("The list of Books:");
         for (Printable printable : bookPrints) {
             if (printable instanceof Book) {
                 printable.print();

@@ -14,12 +14,6 @@ public class MainPrint {
         prints[8] = new Book("The Art of Programming");
         prints[9] = new Magazine("Nature");
 
-        // Вызов метода print() для каждого объекта в массиве
-        for (Printable printable : prints) {
-            printable.print();
-        }
-
-        // Вызов статического метода для вывода названий только журналов
         Magazine.printMagazines(prints);
         Book.printBooks(prints);
     }
