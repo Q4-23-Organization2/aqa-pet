@@ -3,18 +3,18 @@ package HomeWork_10.BookStore;
 public class MainPrint {
     public static void main(String[] args) {
         Printable[] prints = new Printable[10];
-        prints[0] = new Book("Java Programming");
-        prints[1] = new Magazine("Science Today");
-        prints[2] = new Book("The Art of Programming");
-        prints[3] = new Magazine("Nature");
-        prints[4] = new Book("Java Programming");
-        prints[5] = new Magazine("Science Today");
-        prints[6] = new Book("The Art of Programming");
-        prints[7] = new Magazine("Nature");
-        prints[8] = new Book("The Art of Programming");
-        prints[9] = new Magazine("Nature");
+        prints[0] = new Book("First book");
+        prints[1] = new Magazine("First magazine");
+        prints[2] = new Book("Second book");
+        prints[3] = new Magazine("Second magazine");
+        prints[4] = new Book("Third book");
+        prints[5] = new Magazine("Third magazine");
+        prints[6] = new Book("Fourth book");
+        prints[7] = new Magazine("Fourth magazine");
+        prints[8] = new Book("Fifth book");
+        prints[9] = new Magazine("Fifth magazine");
 
-        Magazine.printMagazines(prints);
         Book.printBooks(prints);
+        Magazine.printMagazines(prints);
     }
 }
