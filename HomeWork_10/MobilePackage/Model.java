@@ -10,10 +10,10 @@ public class Model extends MobilePhone{
 
     @Override
     public void makeScreenShot() {
-        System.out.println(phoneModel + "im making a screenshot in application.");
+        System.out.println(phoneModel + " is making a screenshot in application.");
     }
 
     public void phoneCharge () {
-        System.out.println(phoneModel + "is charging now.");
+        System.out.println(phoneModel + " is charging now.");
     }
 }
