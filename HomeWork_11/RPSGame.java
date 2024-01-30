@@ -2,7 +2,7 @@ package HomeWork_11;
 
 import java.util.Scanner;
 
-abstract class RPSGame {
+public class RPSGame {
     private final int MIN_PLAYERS = 2;
     private final int MAX_PLAYERS = 6;
     private Player[] players;
@@ -10,7 +10,7 @@ abstract class RPSGame {
     // Вставил проверку на количество игорков в конструктор, используя константы.
     public RPSGame(int numPlayers) {
         if (numPlayers < MIN_PLAYERS || numPlayers > MAX_PLAYERS) {
-            throw new IllegalArgumentException("Недопустимое количество игроков!");
+            throw new IllegalArgumentException("The number of players does not correspond to the rules of the game!");
         }
 
         // Создание массива игроков
@@ -111,7 +111,7 @@ abstract class RPSGame {
     public abstract void start();
 
     // Внутренний класс игрока
-    class Player {
+    static class Player {
         private final int id;
         private GameItems choice;
 
