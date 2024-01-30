@@ -1,5 +1,5 @@
 package HomeWork_11;
 
-public enum GameItem {
+public enum GameItems {
     ROCK, PAPER, SCISSORS
 }
