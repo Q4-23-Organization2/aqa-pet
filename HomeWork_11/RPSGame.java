@@ -107,8 +107,6 @@ public class RPSGame {
                 (item1 == GameItems.SCISSORS && item2 == GameItems.PAPER);
     }
 
-    // Метод, который должны реализовать наследники для начала игры
-    public abstract void start();
 
     // Внутренний класс игрока
     static class Player {
