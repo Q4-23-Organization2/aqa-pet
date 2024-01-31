@@ -4,25 +4,23 @@ import java.util.Scanner;
 
 // Класс игрока
 public class RPSGame {
-    public void startGame( Scanner scanner) {
-        scanner = new Scanner(System.in);
+    public void startGame() {
+       Scanner scanner = new Scanner(System.in);
         //
         int countOfPlayers = 0;
         while (countOfPlayers != 2 && countOfPlayers != 3) {
+            System.out.println("Incorrect value! Please enter the correct value.");
             try {
-                System.out.println("Введите количество игроков (2 или 3):");
+                System.out.println("Enter the count of players (2 or 3):");
                 countOfPlayers = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
-                System.out.println("Неправильный ввод. Пожалуйста, введите число.");
+                System.out.println("The number cannot be non-integer!");
             }
         }
 
-        // Добавим вызов nextLine() для очистки буфера Scanner
-        scanner.nextLine();
-
         GamePlayer[] gamePlayers = new GamePlayer[countOfPlayers];
         for (int i = 0; i < countOfPlayers; i++) {
-            System.out.println("Введите имя игрока " + (i + 1) + ":");
+            System.out.println("Enter player name " + (i + 1) + ":");
             String name = scanner.nextLine();
             gamePlayers[i] = new HumanPlayer(name);
         }
