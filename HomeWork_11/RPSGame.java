@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 // Класс игрока
 public class RPSGame {
-    public void startGame() {
-        Scanner scanner = new Scanner(System.in);
-
+    public void startGame( Scanner scanner) {
+        scanner = new Scanner(System.in);
+        //
         int countOfPlayers = 0;
         while (countOfPlayers != 2 && countOfPlayers != 3) {
             try {
