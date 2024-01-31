@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class RPSGame {
     public void startGame() {
        Scanner scanner = new Scanner(System.in);
-        //
         int countOfPlayers = 0;
-        while (countOfPlayers != 2 && countOfPlayers != 3) {
+        while (countOfPlayers != 2 && countOfPlayers != 3) {    //В цикле проверяем на правильное число из диапазона
+            //с помощью '' .
             System.out.println("Incorrect value! Please enter the correct value.");
             try {
                 System.out.println("Enter the count of players (2 or 3):");
@@ -45,7 +45,7 @@ public class RPSGame {
         }
 
         if (allEqual) {
-            System.out.println("Ничья! Играем еще раз.");
+            System.out.println("Draw! Let's play again.");
 
             // Повторный выбор предметов
             for (GamePlayer gamePlayer : gamePlayers) {
@@ -63,9 +63,9 @@ public class RPSGame {
             if ((choice1 == GameItems.ROCK && choice2 == GameItems.SCISSORS) ||
                     (choice1 == GameItems.PAPER && choice2 == GameItems.ROCK) ||
                     (choice1 == GameItems.SCISSORS && choice2 == GameItems.PAPER)) {
-                System.out.println(gamePlayers[0].getPlayerName() + " выиграл!");
+                System.out.println(gamePlayers[0].getPlayerName() + " won!");
             } else {
-                System.out.println(gamePlayers[1].getPlayerName() + " выиграл!");
+                System.out.println(gamePlayers[1].getPlayerName() + " won!");
             }
         }
 
@@ -75,13 +75,13 @@ public class RPSGame {
             GameItems choice3 = gamePlayers[2].getGameItemsChoice();
 
             if (choice1 == choice2 && choice1 != choice3) {
-                System.out.println(gamePlayers[0].getPlayerName() + " и " + gamePlayers[1].getPlayerName() + " выиграли!");
+                System.out.println(gamePlayers[0].getPlayerName() + " & " + gamePlayers[1].getPlayerName() + " won!");
             } else if (choice1 == choice3 && choice1 != choice2) {
-                System.out.println(gamePlayers[0].getPlayerName() + " и " + gamePlayers[2].getPlayerName() + " выиграли!");
+                System.out.println(gamePlayers[0].getPlayerName() + " & " + gamePlayers[2].getPlayerName() + " won!");
             } else if (choice2 == choice3 && choice2 != choice1) {
-                System.out.println(gamePlayers[1].getPlayerName() + " и " + gamePlayers[2].getPlayerName() + " выиграли!");
+                System.out.println(gamePlayers[1].getPlayerName() + " & " + gamePlayers[2].getPlayerName() + " won!");
             } else {
-                System.out.println("Ничья! Играем еще раз.");
+                System.out.println("Draw! Let's play again.");
                 // Повторный выбор предметов
                 for (GamePlayer gamePlayer : gamePlayers) {
                     ((HumanPlayer) gamePlayer).makeChoice(scanner);
