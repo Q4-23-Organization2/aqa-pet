@@ -17,6 +17,9 @@ public class RPSGame {
             }
         }
 
+        // Добавим вызов nextLine() для очистки буфера Scanner
+        scanner.nextLine();
+
         GamePlayer[] gamePlayers = new GamePlayer[countOfPlayers];
         for (int i = 0; i < countOfPlayers; i++) {
             System.out.println("Введите имя игрока " + (i + 1) + ":");
