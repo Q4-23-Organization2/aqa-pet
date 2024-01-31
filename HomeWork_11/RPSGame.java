@@ -35,9 +35,9 @@ public class RPSGame {
 
     private void determineWinner(GamePlayer[] gamePlayers, Scanner scanner) {
         boolean allEqual = true;
-        GameItems firstChoice = gamePlayers[0].getgameItemsChoise();
+        GameItems firstChoice = gamePlayers[0].getGameItemsChoice();
         for (int i = 1; i < gamePlayers.length; i++) {
-            if (gamePlayers[i].getgameItemsChoise() != firstChoice) {
+            if (gamePlayers[i].getGameItemsChoice() != firstChoice) {
                 allEqual = false;
                 break;
             }
@@ -57,8 +57,8 @@ public class RPSGame {
         }
 
         if (gamePlayers.length == 2) {
-            GameItems choice1 = gamePlayers[0].getgameItemsChoise();
-            GameItems choice2 = gamePlayers[1].getgameItemsChoise();
+            GameItems choice1 = gamePlayers[0].getGameItemsChoice();
+            GameItems choice2 = gamePlayers[1].getGameItemsChoice();
             if ((choice1 == GameItems.ROCK && choice2 == GameItems.SCISSORS) ||
                     (choice1 == GameItems.PAPER && choice2 == GameItems.ROCK) ||
                     (choice1 == GameItems.SCISSORS && choice2 == GameItems.PAPER)) {
@@ -69,9 +69,9 @@ public class RPSGame {
         }
 
         if (gamePlayers.length == 3) {
-            GameItems choice1 = gamePlayers[0].getgameItemsChoise();
-            GameItems choice2 = gamePlayers[1].getgameItemsChoise();
-            GameItems choice3 = gamePlayers[2].getgameItemsChoise();
+            GameItems choice1 = gamePlayers[0].getGameItemsChoice();
+            GameItems choice2 = gamePlayers[1].getGameItemsChoice();
+            GameItems choice3 = gamePlayers[2].getGameItemsChoice();
 
             if (choice1 == choice2 && choice1 != choice3) {
                 System.out.println(gamePlayers[0].getPlayerName() + " и " + gamePlayers[1].getPlayerName() + " выиграли!");

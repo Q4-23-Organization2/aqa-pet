@@ -22,6 +22,10 @@ class GamePlayer {
         this.gameItemsChoice = choice;
     }
 
+    public GameItems getGameItemsChoice() {
+        return gameItemsChoice;
+    }
+
     public GamePlayer(String playerName) {
         this.playerName = playerName;
     }
