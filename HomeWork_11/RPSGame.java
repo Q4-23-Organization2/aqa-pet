@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 // Класс игрока
 public class RPSGame {
-    // Метод для запуска игры
     public void startGame() {
         Scanner scanner = new Scanner(System.in);
 
-        // Запрашиваем количество игроков
         int countOfPlayers = 0;
         while (countOfPlayers != 2 && countOfPlayers != 3) {
             try {
@@ -19,7 +17,6 @@ public class RPSGame {
             }
         }
 
-        // Создаем массив игроков
         GamePlayer[] gamePlayers = new GamePlayer[countOfPlayers];
         for (int i = 0; i < countOfPlayers; i++) {
             System.out.println("Введите имя игрока " + (i + 1) + ":");
@@ -27,38 +24,41 @@ public class RPSGame {
             gamePlayers[i] = new HumanPlayer(name);
         }
 
-        // Выбор предметов
-        for (GamePlayer gameplayer : gamePlayers) {
-            ((HumanPlayer) gameplayer).makeChoice(scanner);
+        for (GamePlayer gamePlayer : gamePlayers) {
+            ((HumanPlayer) gamePlayer).makeChoice(scanner);
         }
 
-        // Определяем победителя
-        determineWinner(gamePlayers);
+        determineWinner(gamePlayers, scanner);
 
         scanner.close();
     }
 
-    // Метод для определения победителя
-    private void determineWinner(GamePlayer[] gamePlayers) {
-        // Проверка на ничью
+    private void determineWinner(GamePlayer[] gamePlayers, Scanner scanner) {
         boolean allEqual = true;
-        GameItems firstChoice = gamePlayers[0].getChoice();
+        GameItems firstChoice = gamePlayers[0].getgameItemsChoise();
         for (int i = 1; i < gamePlayers.length; i++) {
-            if (gamePlayers[i].getChoice() != firstChoice) {
+            if (gamePlayers[i].getgameItemsChoise() != firstChoice) {
                 allEqual = false;
                 break;
             }
         }
 
         if (allEqual) {
-            System.out.println("Ничья!");
+            System.out.println("Ничья! Играем еще раз.");
+
+            // Повторный выбор предметов
+            for (GamePlayer gamePlayer : gamePlayers) {
+                ((HumanPlayer) gamePlayer).makeChoice(scanner);
+            }
+
+            // Рекурсивный вызов определения победителя
+            determineWinner(gamePlayers, scanner);
             return;
         }
 
-        // Проверка для 2 игроков
         if (gamePlayers.length == 2) {
-            GameItems choice1 = gamePlayers[0].getChoice();
-            GameItems choice2 = gamePlayers[1].getChoice();
+            GameItems choice1 = gamePlayers[0].getgameItemsChoise();
+            GameItems choice2 = gamePlayers[1].getgameItemsChoise();
             if ((choice1 == GameItems.ROCK && choice2 == GameItems.SCISSORS) ||
                     (choice1 == GameItems.PAPER && choice2 == GameItems.ROCK) ||
                     (choice1 == GameItems.SCISSORS && choice2 == GameItems.PAPER)) {
@@ -68,16 +68,10 @@ public class RPSGame {
             }
         }
 
-        // Проверка для 3 игроков
         if (gamePlayers.length == 3) {
-            GameItems choice1 = gamePlayers[0].getChoice();
-            GameItems choice2 = gamePlayers[1].getChoice();
-            GameItems choice3 = gamePlayers[2].getChoice();
-
-            if (choice1 != choice2 && choice2 != choice3 && choice1 != choice3) {
-                System.out.println("Ничья. Играем еще раз.");
-                return;
-            }
+            GameItems choice1 = gamePlayers[0].getgameItemsChoise();
+            GameItems choice2 = gamePlayers[1].getgameItemsChoise();
+            GameItems choice3 = gamePlayers[2].getgameItemsChoise();
 
             if (choice1 == choice2 && choice1 != choice3) {
                 System.out.println(gamePlayers[0].getPlayerName() + " и " + gamePlayers[1].getPlayerName() + " выиграли!");
@@ -86,8 +80,15 @@ public class RPSGame {
             } else if (choice2 == choice3 && choice2 != choice1) {
                 System.out.println(gamePlayers[1].getPlayerName() + " и " + gamePlayers[2].getPlayerName() + " выиграли!");
             } else {
-                System.out.println("Ничья!");
+                System.out.println("Ничья! Играем еще раз.");
+                // Повторный выбор предметов
+                for (GamePlayer gamePlayer : gamePlayers) {
+                    ((HumanPlayer) gamePlayer).makeChoice(scanner);
+                }
+
+                // Рекурсивный вызов определения победителя
+                determineWinner(gamePlayers, scanner);
             }
         }
     }
-}
+    }

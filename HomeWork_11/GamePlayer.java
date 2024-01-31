@@ -4,7 +4,7 @@ package HomeWork_11;
 //класс для игроков
 class GamePlayer {
     protected String playerName;
-    protected GameItems choice;
+    protected GameItems gameItemsChoice;
 
     public GamePlayer() {
 
@@ -18,12 +18,8 @@ class GamePlayer {
         this.playerName = playerName;
     }
 
-    public GameItems getChoice() {
-        return choice;
-    }
-
     public void setChoice(GameItems choice) {
-        this.choice = choice;
+        this.gameItemsChoice = choice;
     }
 
     public GamePlayer(String playerName) {
@@ -31,14 +27,11 @@ class GamePlayer {
     }
 
     public GamePlayer(GameItems choice) {
-        this.choice = choice;
+        this.gameItemsChoice = choice;
     }
 
     public GamePlayer(String playerName, GameItems choice) {
         this.playerName = playerName;
-        this.choice = choice;
-    }
-
-    public void startGame() {
+        this.gameItemsChoice = choice;
     }
 }

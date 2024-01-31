@@ -14,7 +14,7 @@ public class HumanPlayer extends GamePlayer{
         String input = scanner.nextLine().toUpperCase();
 
         try {
-            choice = GameItems.valueOf(input);
+            gameItemsChoice = GameItems.valueOf(input);
         } catch (IllegalArgumentException e) {
             System.out.println("Неправильный выбор. Пожалуйста, выберите ROCK, PAPER или SCISSORS.");
             // Рекурсивный вызов метода makeChoice, пока не будет сделан правильный выбор
