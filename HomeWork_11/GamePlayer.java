@@ -1,35 +1,44 @@
 package HomeWork_11;
 
+
+//класс для игроков
 class GamePlayer {
-    private int gameItemId;
-    private GameItems gameItemChoice;
+    protected String playerName;
+    protected GameItems choice;
 
-    public GamePlayer(int gameItemId) {
-        this.gameItemId = gameItemId;
+    public GamePlayer() {
+
     }
 
-    public GamePlayer(GameItems gameItemChoice) {
-        this.gameItemChoice = gameItemChoice;
+    public String getPlayerName() {
+        return playerName;
     }
 
-    public GamePlayer(int gameItemId, GameItems gameItemChoice) {
-        this.gameItemId = gameItemId;
-        this.gameItemChoice = gameItemChoice;
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
-    public void setGameItemId(int gameItemId) {
-        this.gameItemId = gameItemId;
+    public GameItems getChoice() {
+        return choice;
     }
 
-    public void setGameItemChoice(GameItems gameItemChoice) {
-        this.gameItemChoice = gameItemChoice;
+    public void setChoice(GameItems choice) {
+        this.choice = choice;
     }
 
-    public int getGameItemId() {
-        return gameItemId;
+    public GamePlayer(String playerName) {
+        this.playerName = playerName;
     }
 
-    public GameItems getGameItemChoice() {
-        return gameItemChoice;
+    public GamePlayer(GameItems choice) {
+        this.choice = choice;
+    }
+
+    public GamePlayer(String playerName, GameItems choice) {
+        this.playerName = playerName;
+        this.choice = choice;
+    }
+
+    public void startGame() {
     }
 }

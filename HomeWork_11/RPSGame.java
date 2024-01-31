@@ -2,106 +2,92 @@ package HomeWork_11;
 
 import java.util.Scanner;
 
+// Класс игрока
 public class RPSGame {
-    // Главный класс игры
-    public static class RockPaperScissorsGame {
-        private final int MIN_PLAYERS = 2;
-        private final int MAX_PLAYERS = 6;
-        private final GamePlayer[] gamePlayers;
+    // Метод для запуска игры
+    public void startGame() {
+        Scanner scanner = new Scanner(System.in);
 
-        public RockPaperScissorsGame(int numPlayers) {
-            if (numPlayers < MIN_PLAYERS || numPlayers > MAX_PLAYERS) {
-                throw new IllegalArgumentException("Недопустимое количество игроков.");
-            }
-
-            gamePlayers = new GamePlayer[numPlayers];
-            for (int i = 0; i < numPlayers; i++) {
-                gamePlayers[i] = new GamePlayer(i + 1);
+        // Запрашиваем количество игроков
+        int countOfPlayers = 0;
+        while (countOfPlayers != 2 && countOfPlayers != 3) {
+            try {
+                System.out.println("Введите количество игроков (2 или 3):");
+                countOfPlayers = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Неправильный ввод. Пожалуйста, введите число.");
             }
         }
 
-        // Метод для запуска игры
-        public void play() {
-            Scanner scanner = new Scanner(System.in);
+        // Создаем массив игроков
+        GamePlayer[] gamePlayers = new GamePlayer[countOfPlayers];
+        for (int i = 0; i < countOfPlayers; i++) {
+            System.out.println("Введите имя игрока " + (i + 1) + ":");
+            String name = scanner.nextLine();
+            gamePlayers[i] = new HumanPlayer(name);
+        }
 
-            while (true) {
-                // Сбор выборов от каждого игрока
-                for (GamePlayer player : gamePlayers) {
-                    GameItems gameItemChoice;
-                    while (true) {
-                        System.out.print("Игрок " + player.gameItemId() + ", выберите предмет (камень, ножницы, бумага): ");
-                        String input = scanner.nextLine().toUpperCase();
+        // Выбор предметов
+        for (GamePlayer gameplayer : gamePlayers) {
+            ((HumanPlayer) gameplayer).makeChoice(scanner);
+        }
 
-                        try {
-                            gameItemChoice = GameItems.valueOf(input);
-                            break;
-                        } catch (IllegalArgumentException e) {
-                            System.out.println("Неправильный выбор. Попробуйте еще раз.");
-                        }
-                    }
-                    player.(gameItemChoice);
-                }
+        // Определяем победителя
+        determineWinner(gamePlayers);
 
-                // Проверка на ничью
-                if (isDraw()) {
-                    System.out.println("Ничья! Все игроки сделали одинаковый выбор. Переигрываем.");
-                    continue;
-                }
+        scanner.close();
+    }
 
-                // Проверка на ничью, если игроков больше 2 и выбраны все три разных предмета
-                if (gamePlayers.length > 2 && isDrawForMoreThanTwoPlayers()) {
-                    System.out.println("Ничья! Все игроки выбрали разные предметы. Переигрываем.");
-                    continue;
-                }
-
-                // Определение победителя
-                gamePlayers winner = determineWinner();
-                System.out.println("Игрок " + winner.gameItemId() + " побеждает!");
+    // Метод для определения победителя
+    private void determineWinner(GamePlayer[] gamePlayers) {
+        // Проверка на ничью
+        boolean allEqual = true;
+        GameItems firstChoice = gamePlayers[0].getChoice();
+        for (int i = 1; i < gamePlayers.length; i++) {
+            if (gamePlayers[i].getChoice() != firstChoice) {
+                allEqual = false;
                 break;
             }
-
-            scanner.close();
         }
 
-        // Метод для определения ничьей, если у всех игроков совпал выбор
-        private boolean isDraw() {
-            GameItems gameItemFirstChoice = gamePlayers[0].gameItemChoice();
-            for (int i = 1; i < gamePlayers.length; i++) {
-                if (gamePlayers[i].gameItemChoice() != gameItemFirstChoice) {
-                    return false;
-                }
+        if (allEqual) {
+            System.out.println("Ничья!");
+            return;
+        }
+
+        // Проверка для 2 игроков
+        if (gamePlayers.length == 2) {
+            GameItems choice1 = gamePlayers[0].getChoice();
+            GameItems choice2 = gamePlayers[1].getChoice();
+            if ((choice1 == GameItems.ROCK && choice2 == GameItems.SCISSORS) ||
+                    (choice1 == GameItems.PAPER && choice2 == GameItems.ROCK) ||
+                    (choice1 == GameItems.SCISSORS && choice2 == GameItems.PAPER)) {
+                System.out.println(gamePlayers[0].getPlayerName() + " выиграл!");
+            } else {
+                System.out.println(gamePlayers[1].getPlayerName() + " выиграл!");
             }
-            return true;
         }
 
-        // Метод для определения ничьей, если игроков больше 2 и выбраны все три разных предмета
-        private boolean isDrawForMoreThanTwoPlayers() {
-            boolean[] chosen = new boolean[3];
-            for (GamePlayer player : gamePlayers) {
-                int choiceIndex = player.gameItemChoice().ordinal();
-                if (!chosen[choiceIndex]) {
-                    chosen[choiceIndex] = true;
-                }
+        // Проверка для 3 игроков
+        if (gamePlayers.length == 3) {
+            GameItems choice1 = gamePlayers[0].getChoice();
+            GameItems choice2 = gamePlayers[1].getChoice();
+            GameItems choice3 = gamePlayers[2].getChoice();
+
+            if (choice1 != choice2 && choice2 != choice3 && choice1 != choice3) {
+                System.out.println("Ничья. Играем еще раз.");
+                return;
             }
-            return chosen[0] && chosen[1] && chosen[2];
-        }
 
-        // Метод для определения победителя
-        private GamePlayer determineWinner() {
-            GamePlayer winner = gamePlayers[0];
-            for (int i = 1; i < gamePlayers.length; i++) {
-                if (beats(gamePlayers[i].getGameItemChoice(), winner.getGameItemChoice())) {
-                    winner = gamePlayers[i];
-                }
+            if (choice1 == choice2 && choice1 != choice3) {
+                System.out.println(gamePlayers[0].getPlayerName() + " и " + gamePlayers[1].getPlayerName() + " выиграли!");
+            } else if (choice1 == choice3 && choice1 != choice2) {
+                System.out.println(gamePlayers[0].getPlayerName() + " и " + gamePlayers[2].getPlayerName() + " выиграли!");
+            } else if (choice2 == choice3 && choice2 != choice1) {
+                System.out.println(gamePlayers[1].getPlayerName() + " и " + gamePlayers[2].getPlayerName() + " выиграли!");
+            } else {
+                System.out.println("Ничья!");
             }
-            return winner;
-        }
-
-        // Метод, определяющий, выигрывает ли один предмет у другого
-        private boolean beats(GameItems item1, GameItems item2) {
-            return (item1 == GameItems.ROCK && item2 == GameItems.SCISSORS) ||
-                    (item1 == GameItems.PAPER && item2 == GameItems.ROCK) ||
-                    (item1 == GameItems.SCISSORS && item2 == GameItems.PAPER);
         }
     }
 }
