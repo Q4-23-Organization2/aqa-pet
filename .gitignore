@@ -20,6 +20,11 @@
 *.rar
 .idea/
 
+HomeWork_6\
+HomeWork_7\
+HomeWork_8\
+img\
+
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
