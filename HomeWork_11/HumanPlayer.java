@@ -8,7 +8,7 @@ public class HumanPlayer extends GamePlayer {       //Класс наследо�
     }
 
     public void makeChoice(Scanner scanner) {
-        System.out.println("Player" + playerName + " make your choice from the three proposed options (ROCK, PAPER, SCISSORS):");
+        System.out.println("Player " + playerName + " make your choice from the three proposed options (ROCK, PAPER, SCISSORS):");
         String input = scanner.nextLine().toUpperCase();    //Предлагаем сделать выбор из enum констант
         //toUpperCase() - Преобразуем в верхний регистр, чтоб константа не чувствовала дискомфорт при вводе
 
