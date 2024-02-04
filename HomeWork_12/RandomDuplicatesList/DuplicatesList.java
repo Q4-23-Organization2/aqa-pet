@@ -1,4 +1,4 @@
-package HomeWork_12.RandomDuplicateList;
+package HomeWork_12.RandomDuplicatesList;
 
 import java.util.*;
 
