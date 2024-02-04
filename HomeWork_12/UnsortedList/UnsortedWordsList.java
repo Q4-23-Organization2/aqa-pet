@@ -34,4 +34,18 @@ public class UnsortedWordsList {
         System.out.println(randomText);     //Выводим на экран рандомный текст из наших слов
 
 
+    public static String generateRandomText(List<String> randomWords, int textLength) {
+        String randomText = "";
+        Random random = new Random();
+
+        for (int i = 0; i < textLength; i++) {
+            // Получаем случайное слово из списка
+            String randomWord = randomWords.get(random.nextInt(randomWords.size()));
+            //генерируем случайное число, используем его в качестве индекса, чтобы получить случайное слово из списка
+            randomText += randomWord + " ";
+            //Присваиваем выбранное слово в пустую строку и добавляем пробел, чтоб отделить слова
+        }
+
+        return randomText;
+    }
 }
