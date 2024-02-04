@@ -29,5 +29,9 @@ public class UnsortedWordsList {
         words.add("TypeScript");
         words.add("typescript");
 
+        // Генерируем рандомный текст из слов в нашем листе
+        String randomText = generateRandomText(words, 100);
+        System.out.println(randomText);     //Выводим на экран рандомный текст из наших слов
+
 
 }
