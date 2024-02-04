@@ -56,7 +56,10 @@ public class UnsortedWordsList {
             }
         }
 
-
+        // Выводим уникальные слова и их частоту вхождения при помощи цикла 'for each'
+        for (String wordsFrequency : wordFrequencyMap.keySet()) {
+            System.out.println(wordsFrequency + ": " + wordFrequencyMap.get(wordsFrequency));
+        }
     }
     public static String generateRandomText(List<String> randomWords, int textLength) {
         String randomText = "";
