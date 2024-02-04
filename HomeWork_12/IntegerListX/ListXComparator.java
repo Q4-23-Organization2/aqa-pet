@@ -12,7 +12,5 @@ class ListXComparator implements Comparator<Integer> {
 
     public ListXComparator(int x) {
         this.x = x;
-
-
     }
 }
