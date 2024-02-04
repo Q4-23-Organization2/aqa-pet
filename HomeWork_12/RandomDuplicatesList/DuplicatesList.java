@@ -1,4 +1,4 @@
-package HomeWork_12;
+package HomeWork_12.RandomDuplicateList;
 
 import java.util.*;
 
@@ -40,4 +40,3 @@ public class DuplicatesList {
         System.out.println("Count of duplicates= " + duplicatesCount);
     }
 }
-
