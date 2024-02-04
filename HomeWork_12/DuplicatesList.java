@@ -3,9 +3,12 @@ package HomeWork_12;
 import java.util.*;
 
 public class DuplicatesList {
+
+    // Метод для генерации коллекции случайных чисел заданного размера в заданном диапазоне
     public static List<Integer> randomList(int listSize, int minNum, int maxNum) {
         List<Integer> randomListNumbers = new ArrayList<>();
         Random randomNumbers = new Random();
+        // Заполнение списка случайными числами в заданном диапазоне
         for (int i = 0; i < listSize; i++) {
             randomListNumbers.add(randomNumbers.nextInt(maxNum - minNum +1) + minNum);
         }
@@ -14,16 +17,18 @@ public class DuplicatesList {
 
     public static void main(String[] args) {
         List<Integer> newRandomList = randomList(100, -20, 20);
-        List<Integer> noDuplicatesList = new ArrayList<>();
-        Set<Integer> noDuplicatesSet = new HashSet<>();
-        int duplicatesCount = 0;
+        // Создание нового списка для генерации случайных чисел в диапазоне
 
-        for (Integer numList : newRandomList) {
+        Set<Integer> noDuplicatesSet = new HashSet<>();     // Создание нового сета для отслеживания неповторяющихся чисел
+        List<Integer> noDuplicatesList = new ArrayList<>(); // Создание нового списка для хранения элементов без дубликатов
+        int duplicatesCount = 0; // Переменная, которая увиличивается с каждым удалённым дубликатом, и отображает общее их количество
+
+        for (Integer numList : newRandomList) {         //В цикле условие для перебора и сортировки дубликатов от уникальных чисел
             if (noDuplicatesSet.contains(numList)) {
-                duplicatesCount++;
+                duplicatesCount++;                      //Счётчик удалённых дубликатов
             }else{
-                noDuplicatesSet.add(numList);
-                noDuplicatesList.add(numList);
+                noDuplicatesSet.add(numList);           //Добавление уникального числа в сет
+                noDuplicatesList.add(numList);          //Добавление уникального числа в новый лист
             }
         }
         System.out.println("Original generated list: ");
