@@ -28,10 +28,10 @@ public class ListX {
 
         System.out.println("Исходный список: " + listOfNumbers); // Вывод исходного списка на экран
 
-        // Создание компаратора для списка
+        // Создание компаратора для списка чисел
         Comparator<Integer> numbersComparator = new ListXComparator(x);
 
-        // Сортировка списка с использованием созданного компаратора
+        // Сортировка списка чисел с использованием созданного компаратора
         listOfNumbers.sort(numbersComparator);
 
         System.out.println("Отсортированный список: " + listOfNumbers); // Вывод отсортированного списка на экран
