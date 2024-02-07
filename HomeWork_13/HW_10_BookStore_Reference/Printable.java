@@ -5,7 +5,7 @@ public interface Printable {
     void print();
 
     // Дефолтный метод для печати массива объектов типа Printable
-    default void printArray(Printable[] prints) {
+    default void printArrayPrintable(Printable[] prints) {
         // Итерация по массиву и вызов метода print() для каждого элемента
         for (Printable printable : prints) {
             printable.print();
