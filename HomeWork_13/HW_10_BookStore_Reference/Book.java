@@ -9,7 +9,7 @@ class Book implements Printable {
         this.bookTitle = bookTitle;
     }
 
-    // Реализация метода print() для класса Book
+    // Метод print() для класса Book
     @Override
     public void print() {
         System.out.println("The book title is: " + bookTitle);

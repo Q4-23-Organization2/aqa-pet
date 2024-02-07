@@ -16,7 +16,7 @@ public class MainPrint {
         prints[8] = new Book("Fifth book");
         prints[9] = new Magazine("Fifth magazine");
 
-        // Вызов метода printArray для печати всех объектов в массиве prints
+        // Вызов методов 'printArrayBooks' и 'printArrayMagazines' для отдельной печати всех объектов в массиве prints
         prints[0].printArrayBooks(prints);
         prints[0].printArrayMagazines(prints);
     }

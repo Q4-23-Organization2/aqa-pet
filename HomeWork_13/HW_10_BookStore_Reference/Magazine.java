@@ -9,7 +9,7 @@ class Magazine implements Printable {
         this.magazineTitle = magazineTitle;
     }
 
-    // Реализация метода print() для класса Magazine
+    // Метод print() для класса Magazine
     @Override
     public void print() {
         System.out.println("The magazine title is: " + magazineTitle);
