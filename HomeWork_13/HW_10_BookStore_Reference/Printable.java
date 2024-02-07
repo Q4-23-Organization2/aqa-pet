@@ -5,10 +5,23 @@ public interface Printable {
     void print();
 
     // Дефолтный метод для печати массива объектов типа Printable
-    default void printArrayPrintable(Printable[] prints) {
-        // Итерация по массиву и вызов метода print() для каждого элемента
+    default void printArrayBooks(Printable[] prints) {
+        System.out.println("Printing Books:");
+        // Итерация по массиву и вызов метода print() для каждой книги
         for (Printable printable : prints) {
-            printable.print();
+            if (printable instanceof Book) {
+                printable.print();
+            }
+        }
+    }
+
+    default void printArrayMagazines(Printable[] prints) {
+        System.out.println("Printing Magazines:");
+        // Итерация по массиву и вызов метода print() для каждого журнала
+        for (Printable printable : prints) {
+            if (printable instanceof Magazine) {
+                printable.print();
+            }
         }
     }
 }

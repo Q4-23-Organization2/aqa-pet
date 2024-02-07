@@ -17,27 +17,7 @@ public class MainPrint {
         prints[9] = new Magazine("Fifth magazine");
 
         // Вызов метода printArray для печати всех объектов в массиве prints
-        printBooks(prints);
-        printMagazines(prints);
-    }
-
-    // Метод для печати всех книг
-    public static void printBooks(Printable[] prints) {
-        System.out.println("Printing Books:");
-        for (Printable printable : prints) {
-            if (printable instanceof Book) {
-                printable.print();
-            }
-        }
-    }
-
-    // Метод для печати всех журналов
-    public static void printMagazines(Printable[] prints) {
-        System.out.println("Printing Magazines:");
-        for (Printable printable : prints) {
-            if (printable instanceof Magazine) {
-                printable.print();
-            }
-        }
+        prints[0].printArrayBooks(prints);
+        prints[0].printArrayMagazines(prints);
     }
 }
