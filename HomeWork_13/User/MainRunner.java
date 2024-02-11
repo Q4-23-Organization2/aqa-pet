@@ -45,5 +45,11 @@ public class MainRunner {
                 .toList();
         sortedByNameAndAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", возраст: " + user.getAge()));
 
+        // 5. Проверка наличия пользователей с фамилией, начинающейся с "S" или "A"
+        System.out.println("\n5. Пользователи с фамилией, начинающейся с 'S' или 'A':");
+        boolean usersWithSA = users.stream()
+                .anyMatch(user -> user.getSecondName().startsWith("S") || user.getSecondName().startsWith("A"));
+        System.out.println(usersWithSA ? "Есть такие пользователи." : "Таких пользователей нет.");
+
     }
 }
