@@ -33,7 +33,7 @@ public class MainRunner {
         //Перебираем каждый элемент в списке с помощью 'forEach' и выводим на экран
 
         // 3. Подсчет среднего возраста пользователей
-        System.out.println("\n3. Average age of all users:");
+        System.out.println("\n3. What is the average age of users?");
         double averageAgeOfUsers = users.stream()   //Создаем Стрим объектов User
                 .mapToDouble(User::getAge)  //Преобразуем их возрасты в поток типа 'double' с помощью метода mapToDouble и лямбда выражения
                 .average()  //Вычисляем среднее значение с помощью метода 'average()'
