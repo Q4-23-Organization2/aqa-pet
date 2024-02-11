@@ -38,5 +38,12 @@ public class MainRunner {
                 .orElse(0);
         System.out.println("Средний возраст: " + averageAge);
 
+        // 4. Сортировка списка по нескольким свойствам: firstName и age
+        System.out.println("\n4. Сортировка по имени и возрасту:");
+        List<User> sortedByNameAndAge = users.stream()
+                .sorted(Comparator.comparing(User::getFirstName).thenComparing(User::getAge))
+                .toList();
+        sortedByNameAndAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", возраст: " + user.getAge()));
+
     }
 }
