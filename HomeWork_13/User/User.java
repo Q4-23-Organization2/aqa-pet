@@ -1,4 +1,9 @@
 package HomeWork_13.User;
 
-public class User {
+class User {
+    private String firstName;
+    private String secondName;
+    private int age;
+
+
 }
