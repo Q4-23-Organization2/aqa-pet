@@ -1,9 +1,9 @@
 package HomeWork_13.User;
 
 class User {
-    private String firstName;
-    private String secondName;
-    private int age;
+    private final String firstName;
+    private final String secondName;
+    private final int age;
 
     // Конструктор для создания объекта пользователя
     public User(String firstName, String secondName, int age) {
