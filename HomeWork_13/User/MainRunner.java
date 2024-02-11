@@ -51,5 +51,10 @@ public class MainRunner {
                 .anyMatch(user -> user.getSecondName().startsWith("S") || user.getSecondName().startsWith("A"));
         System.out.println(usersWithSA ? "Есть такие пользователи." : "Таких пользователей нет.");
 
+        // 6. Проверка, все ли пользователи старше 18 лет
+        System.out.println("\n6. Все ли пользователи старше 18 лет:");
+        boolean allOlderThan18 = users.stream()
+                .allMatch(user -> user.getAge() > 18);
+        System.out.println(allOlderThan18 ? "Все пользователи старше 18 лет." : "Есть пользователи младше 18 лет.");
     }
 }
