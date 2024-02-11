@@ -12,7 +12,7 @@ class User {
         this.age = age;
     }
 
-    // Геттеры для получения значений полей
+    // Геттеры для получения значений полей пользователей
     public String getFirstName() {
         return firstName;
     }
