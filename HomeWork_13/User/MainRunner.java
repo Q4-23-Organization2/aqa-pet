@@ -29,5 +29,14 @@ public class MainRunner {
                 .sorted(Comparator.comparingInt(User::getAge))
                 .toList();
         usersSortedByAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", возраст: " + user.getAge()));
+
+        // 3. Подсчет среднего возраста пользователей
+        System.out.println("\n3. Средний возраст пользователей:");
+        double averageAge = users.stream()
+                .mapToDouble(User::getAge)
+                .average()
+                .orElse(0);
+        System.out.println("Средний возраст: " + averageAge);
+
     }
 }
