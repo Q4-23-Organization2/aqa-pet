@@ -20,11 +20,11 @@ public class MainRunner {
         users.add(new User("Belinda", "McClory", 15));
 
         // 1. Вывод списка из 10 объектов типа User
-        System.out.println("1. Список из 10 объектов типа User:");
-        users.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", возраст: " + user.getAge()));
+        System.out.println("\n1. List of 10 objects of type User before sorting:"); //'/n' - это перенос строки
+        users.forEach(user -> System.out.println("User: " + user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
 
         // 2. Сортировка списка по возрасту и запись в новую коллекцию
-        System.out.println("\n2. Сортировка по возрасту:");
+        System.out.println("\n2. List of 10 objects of type User after sorting:");
         List<User> sortedByAge = users.stream()
                 .sorted(Comparator.comparingInt(User::getAge))
                 .toList();
