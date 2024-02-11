@@ -38,7 +38,7 @@ public class MainRunner {
                 .mapToDouble(User::getAge)  //Преобразуем их возрасты в поток типа 'double' с помощью метода mapToDouble и лямбда выражения
                 .average()  //Вычисляем среднее значение с помощью метода 'average()'
                 .orElse(0); //Возвращает значение по умолчанию равное '0', если поток пуст или среднее значение не может быть вычислено
-        System.out.println("Average age of all users: " + averageAgeOfUsers + "years");   //Выводим на экран средний возраст пользователей
+        System.out.println("Average age of all users: " + averageAgeOfUsers + " years");   //Выводим на экран средний возраст пользователей
 
         // 4. Сортировка списка по нескольким свойствам: 'firstName' и 'age'
         System.out.println("\n4. Sort by name and age:");
