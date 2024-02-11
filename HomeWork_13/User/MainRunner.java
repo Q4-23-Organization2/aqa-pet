@@ -24,37 +24,37 @@ public class MainRunner {
         users.forEach(user -> System.out.println("User: " + user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
 
         // 2. Сортировка списка по возрасту и запись в новую коллекцию
-        System.out.println("\n2. List of 10 objects of type User after sorting:");
+        System.out.println("\n2. List of 10 objects of type User after sorting in ascending order:");
         List<User> usersSortedByAge = users.stream()
                 .sorted(Comparator.comparingInt(User::getAge))
                 .toList();
-        usersSortedByAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", возраст: " + user.getAge()));
+        usersSortedByAge.forEach(user -> System.out.println("User: " + user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
 
         // 3. Подсчет среднего возраста пользователей
-        System.out.println("\n3. Средний возраст пользователей:");
+        System.out.println("\n3. Average age of all users:");
         double averageAge = users.stream()
                 .mapToDouble(User::getAge)
                 .average()
                 .orElse(0);
-        System.out.println("Средний возраст: " + averageAge);
+        System.out.println("Average age of all users: " + averageAge);
 
         // 4. Сортировка списка по нескольким свойствам: firstName и age
         System.out.println("\n4. Сортировка по имени и возрасту:");
         List<User> sortedByNameAndAge = users.stream()
                 .sorted(Comparator.comparing(User::getFirstName).thenComparing(User::getAge))
                 .toList();
-        sortedByNameAndAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", возраст: " + user.getAge()));
+        sortedByNameAndAge.forEach(user -> System.out.println("User: " + user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
 
         // 5. Проверка наличия пользователей с фамилией, начинающейся с "S" или "A"
-        System.out.println("\n5. Пользователи с фамилией, начинающейся с 'S' или 'A':");
+        System.out.println("\n5. Are there any users with a last name starting with a letter 'S' or 'A':");
         boolean usersWithSA = users.stream()
                 .anyMatch(user -> user.getSecondName().startsWith("S") || user.getSecondName().startsWith("A"));
-        System.out.println(usersWithSA ? "Есть такие пользователи." : "Таких пользователей нет.");
+        System.out.println(usersWithSA ? "There are such users." : "There are no such users.");
 
         // 6. Проверка, все ли пользователи старше 18 лет
-        System.out.println("\n6. Все ли пользователи старше 18 лет:");
+        System.out.println("\n6. Are all users over 18 years of age:");
         boolean allOlderThan18 = users.stream()
                 .allMatch(user -> user.getAge() > 18);
-        System.out.println(allOlderThan18 ? "Все пользователи старше 18 лет." : "Есть пользователи младше 18 лет.");
+        System.out.println(allOlderThan18 ? "Yes. All users over 18 years of age:" : "No. Not all users are over 18 years of age.");
     }
 }
