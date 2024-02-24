@@ -1,8 +1,12 @@
 package HomeWork_11;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
+
 import java.util.Scanner;
 
 public class RPSGame {
+    private static final Logger logger = (Logger) LogManager.getLogger(RPSGame.class);
     public void startGame() {
         Scanner scanner = new Scanner(System.in);
         int countOfPlayers = 0;

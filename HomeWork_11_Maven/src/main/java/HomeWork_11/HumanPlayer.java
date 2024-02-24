@@ -6,7 +6,6 @@ import org.apache.logging.log4j.core.Logger;
 import java.util.Scanner;
 
 public class HumanPlayer extends GamePlayer {       //Класс наследования
-
     private static final Logger logger = (Logger) LogManager.getLogger(HumanPlayer.class);
     public HumanPlayer(String playerName) {
         super(playerName);
