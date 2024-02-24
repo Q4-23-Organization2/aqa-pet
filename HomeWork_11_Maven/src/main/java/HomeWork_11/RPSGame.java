@@ -15,15 +15,15 @@ public class RPSGame {
         // Цикл do-while для запроса количества игроков (2 или 3)
         do {
             try {
-                System.out.println("Enter the count of players (2 or 3):");
+                logger.info("Enter the count of players (2 or 3):");
                 countOfPlayers = Integer.parseInt(scanner.nextLine());
 
                 if (countOfPlayers < 2 || countOfPlayers > 3) {
-                    System.out.println("Incorrect value! Please enter 2 or 3.");
+                    logger.error("Incorrect value! Please enter 2 or 3.");
                     //Тут проверка на неверное количество игроков с сообщением.
                 }
             } catch (NumberFormatException e) {
-                System.out.println("The number cannot be non-integer!");
+                logger.error("The number cannot be non-integer!");
                 //Тут проверка на нецелое число при помощи (try -catch) с сообщением.
             }
         } while (countOfPlayers != 2 && countOfPlayers != 3);
@@ -36,7 +36,7 @@ public class RPSGame {
             for (int i = 0; i < countOfPlayers; i++) {
                 if (!isDraw) {
                     // Если была ничья, то не делается повторный запрос имён игроков, а сразу переходит к повторным выборам предметов.
-                    System.out.println("Enter player name " + (i + 1) + ":");
+                    logger.info("Enter player name " + (i + 1) + ":");
                     String name = scanner.nextLine();
                     gamePlayers[i] = new HumanPlayer(name);
                 }
@@ -57,7 +57,7 @@ public class RPSGame {
             }
 
             if (isDraw) {
-                System.out.println("Draw! Let's play again.");
+                logger.info("Draw! Let's play again.");
             }
         } while (isDraw);
 
@@ -74,9 +74,9 @@ public class RPSGame {
             if ((choice1 == GameItems.ROCK && choice2 == GameItems.SCISSORS) ||
                     (choice1 == GameItems.PAPER && choice2 == GameItems.ROCK) ||
                     (choice1 == GameItems.SCISSORS && choice2 == GameItems.PAPER)) {
-                System.out.println("Player " + gamePlayers[0].getPlayerName() + " won!");
+                logger.info("Player {} won!", gamePlayers[0].getPlayerName());
             } else {
-                System.out.println("Player " + gamePlayers[1].getPlayerName() + " won!");
+                logger.info("Player {} won!", gamePlayers[1].getPlayerName());
             }
         }
 
@@ -85,13 +85,13 @@ public class RPSGame {
             GameItems choice2 = gamePlayers[1].getGameItemsChoice();
             GameItems choice3 = gamePlayers[2].getGameItemsChoice();
             if (choice1 == choice2 && choice1 != choice3) {
-                System.out.println("Players " + gamePlayers[0].getPlayerName() + " & " + gamePlayers[1].getPlayerName() + " won!");
+                logger.info("Players {} & {} won!", gamePlayers[0].getPlayerName(), gamePlayers[1].getPlayerName());
             } else if (choice1 == choice3 && choice1 != choice2) {
-                System.out.println("Players " + gamePlayers[0].getPlayerName() + " & " + gamePlayers[2].getPlayerName() + " won!");
+                logger.info("Players {} & {} won!", gamePlayers[0].getPlayerName(), gamePlayers[2].getPlayerName());
             } else if (choice2 == choice3 && choice2 != choice1) {
-                System.out.println("Players " + gamePlayers[1].getPlayerName() + " & " + gamePlayers[2].getPlayerName() + " won!");
+                logger.info("Players {} & {} won!", gamePlayers[1].getPlayerName(), gamePlayers[2].getPlayerName());
             } else {
-                System.out.println("Draw! Let's play again.");      //Ничья, если все игроки сделали одинаковый выбор.
+                logger.info("Draw! Let's play again.");
             }
         }
     }
