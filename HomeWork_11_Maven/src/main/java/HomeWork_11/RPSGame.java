@@ -16,7 +16,7 @@ public class RPSGame {
 
                 if (countOfPlayers < 2 || countOfPlayers > 3) {
                     System.out.println("Incorrect value! Please enter 2 or 3.");
-                    //Тут проверка не неверное количество игроков с сообщением.
+                    //Тут проверка на неверное количество игроков с сообщением.
                 }
             } catch (NumberFormatException e) {
                 System.out.println("The number cannot be non-integer!");
