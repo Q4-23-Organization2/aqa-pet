@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>HomeWork_11_Maven</module>
+        <module>HomeWork_16</module>
     </modules>
 
     <properties>
