@@ -1,5 +1,6 @@
 package HomeWork_13.HW_10_BookStore_Reference;
 
+@FunctionalInterface
 public interface Printable {
     // Метод print, который должны реализовать классы, реализующие интерфейс Printable
     void print();
