@@ -35,7 +35,7 @@ public class MainRunner {
         List<User> sortedByAge = users.stream()
                 .sorted(Comparator.comparingInt(User::getAge))
                 .collect(Collectors.toList());
-        System.out.println("Sorted by age:");
+        logger.info("Sorted by age:");
         sortedByAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
     }
 
