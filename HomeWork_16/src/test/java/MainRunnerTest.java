@@ -1,4 +1,7 @@
+import HW_13_Java_8_Separate_Methods.MainRunner;
 import HW_13_Java_8_Separate_Methods.User;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -7,59 +10,58 @@ import org.testng.annotations.Test;
 
 import java.util.Collections;
 import java.util.List;
-import HW_13_Java_8_Separate_Methods.MainRunner;
 
 public class MainRunnerTest {
+    private static final Logger logger = LogManager.getLogger(MainRunnerTest.class);
     private List<User> users;
 
-    // Метод, выполняющийся перед каждым тестом для подготовки данных
     @BeforeMethod
     public void setUp() {
         users = MainRunner.createUserList();
     }
 
-    // Метод, выполняющийся после каждого теста для очистки данных
     @AfterMethod
     public void tearDown() {
         users = null;
     }
 
-    // Положительный тест для метода sortUsersByAge()
+    // Положительные тесты
     @Test
     public void testSortUsersByAge() {
+        logger.info("Running testSortUsersByAge...");
         MainRunner.sortUsersByAge(users);
         Assert.assertEquals(users.get(0).getAge(), 15);
     }
 
-    // Второй положительный тест для метода sortUsersByAge()
     @Test
     public void testSortUsersByAgeSecondCase() {
+        logger.info("Running testSortUsersByAgeSecondCase...");
         MainRunner.sortUsersByAge(users);
         Assert.assertEquals(users.get(9).getAge(), 50);
     }
 
-    // Положительный тест для метода calculateAverageAge()
     @Test
     public void testCalculateAverageAge() {
+        logger.info("Running testCalculateAverageAge...");
         double averageAge = MainRunner.calculateAverageAge(users);
         Assert.assertEquals(averageAge, 29.2);
     }
 
-    // Положительный тест для метода sortUsersByNameAndAge()
     @Test
     public void testSortUsersByNameAndAge() {
+        logger.info("Running testSortUsersByNameAndAge...");
         MainRunner.sortUsersByNameAndAge(users);
         Assert.assertEquals(users.get(0).getFirstName(), "Belinda");
     }
 
-    // Негативный тест для метода checkUsersWithSorA()
+    // Отрицательный тест
     @Test(dataProvider = "negativeTestData")
     public void testCheckUsersWithSorA(List<User> users) {
+        logger.info("Running testCheckUsersWithSorA...");
         List<User> result = MainRunner.checkUsersWithSorA(users);
         Assert.assertTrue(result.isEmpty());
     }
 
-    // Провайдер данных для негативного теста
     @DataProvider(name = "negativeTestData")
     public Object[][] negativeTestData() {
         return new Object[][]{
@@ -68,9 +70,9 @@ public class MainRunnerTest {
         };
     }
 
-    // Положительный тест для метода checkAllUsersOlderThan18()
     @Test
     public void testCheckAllUsersOlderThan18() {
+        logger.info("Running testCheckAllUsersOlderThan18...");
         boolean allOlderThan18 = MainRunner.checkAllUsersOlderThan18(users);
         Assert.assertFalse(allOlderThan18);
     }
