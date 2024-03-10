@@ -1,11 +1,15 @@
 package HW_13_Java_8_Separate_Methods;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class MainRunner {
+    private static final Logger logger = LogManager.getLogger(MainRunner.class);
     public static void main(String[] args) {
         List<User> users = createUserList();
 
@@ -36,7 +40,9 @@ public class MainRunner {
                 .sorted(Comparator.comparingInt(User::getAge))
                 .collect(Collectors.toList());
         logger.info("Sorted by age:");
-        sortedByAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
+        logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        sortedByAge.forEach(user -> logger.info(user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
+        logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     }
 
     public static double calculateAverageAge(List<User> users) {
@@ -44,7 +50,8 @@ public class MainRunner {
                 .mapToInt(User::getAge)
                 .average()
                 .orElse(0);
-        System.out.println("Average age: " + averageAge);
+        logger.info("Average age: " + averageAge);
+        logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         return averageAge;
     }
 
@@ -52,21 +59,24 @@ public class MainRunner {
         List<User> sortedByNameAndAge = users.stream()
                 .sorted(Comparator.comparing(User::getFirstName).thenComparing(User::getAge))
                 .collect(Collectors.toList());
-        System.out.println("Sorted by name and age:");
-        sortedByNameAndAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
+        logger.info("Sorted by name and age:");
+        logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        sortedByNameAndAge.forEach(user -> logger.info(user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
+        logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     }
 
     public static List<User> checkUsersWithSorA(List<User> users) {
         boolean hasSorA = users.stream()
                 .anyMatch(user -> user.getSecondName().startsWith("S") || user.getSecondName().startsWith("A"));
-        System.out.println("Users with S or A: " + hasSorA);
+        logger.info("Users with S or A: " + hasSorA);
+        logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         return users;
     }
 
     public static boolean checkAllUsersOlderThan18(List<User> users) {
         boolean allOlderThan18 = users.stream()
                 .allMatch(user -> user.getAge() > 18);
-        System.out.println("All users older than 18: " + allOlderThan18);
+        logger.info("All users older than 18: " + allOlderThan18);
         return allOlderThan18;
     }
 }
