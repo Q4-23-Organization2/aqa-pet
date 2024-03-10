@@ -1,4 +1,4 @@
-package HomeWork_13.User;
+package User;
 
 import java.util.ArrayList;
 import java.util.Comparator;

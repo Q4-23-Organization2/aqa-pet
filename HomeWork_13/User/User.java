@@ -1,4 +1,4 @@
-package HomeWork_13.User;
+package User;
 
 class User {
     private final String firstName;
