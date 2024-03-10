@@ -16,7 +16,7 @@ public class MainRunner {
         checkAllUsersOlderThan18(users);
     }
 
-    private static List<User> createUserList() {
+    public static List<User> createUserList() {
         List<User> users = new ArrayList<>();
         users.add(new User("Keanu", "Reeves", 25));
         users.add(new User("Laurence", "Fishburne", 30));
@@ -31,7 +31,7 @@ public class MainRunner {
         return users;
     }
 
-    private static void sortUsersByAge(List<User> users) {
+    public static void sortUsersByAge(List<User> users) {
         List<User> sortedByAge = users.stream()
                 .sorted(Comparator.comparingInt(User::getAge))
                 .collect(Collectors.toList());
@@ -39,15 +39,16 @@ public class MainRunner {
         sortedByAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
     }
 
-    private static void calculateAverageAge(List<User> users) {
+    public static double calculateAverageAge(List<User> users) {
         double averageAge = users.stream()
                 .mapToInt(User::getAge)
                 .average()
                 .orElse(0);
         System.out.println("Average age: " + averageAge);
+        return averageAge;
     }
 
-    private static void sortUsersByNameAndAge(List<User> users) {
+    public static void sortUsersByNameAndAge(List<User> users) {
         List<User> sortedByNameAndAge = users.stream()
                 .sorted(Comparator.comparing(User::getFirstName).thenComparing(User::getAge))
                 .collect(Collectors.toList());
@@ -55,15 +56,17 @@ public class MainRunner {
         sortedByNameAndAge.forEach(user -> System.out.println(user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
     }
 
-    private static void checkUsersWithSorA(List<User> users) {
+    public static List<User> checkUsersWithSorA(List<User> users) {
         boolean hasSorA = users.stream()
                 .anyMatch(user -> user.getSecondName().startsWith("S") || user.getSecondName().startsWith("A"));
         System.out.println("Users with S or A: " + hasSorA);
+        return users;
     }
 
-    private static void checkAllUsersOlderThan18(List<User> users) {
+    public static boolean checkAllUsersOlderThan18(List<User> users) {
         boolean allOlderThan18 = users.stream()
                 .allMatch(user -> user.getAge() > 18);
         System.out.println("All users older than 18: " + allOlderThan18);
+        return allOlderThan18;
     }
 }

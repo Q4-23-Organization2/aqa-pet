@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import java.util.Collections;
 import java.util.List;
+import HW_13_Java_8_Separate_Methods.MainRunner;
 
 public class MainRunnerTest {
     private List<User> users;
