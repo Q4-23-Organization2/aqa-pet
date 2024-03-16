@@ -21,7 +21,7 @@ public class MainRunnerTest {
     }
 
     @AfterMethod
-    public void tearDown() {
+    public void tearDown1() {
         users = null;
     }
 
