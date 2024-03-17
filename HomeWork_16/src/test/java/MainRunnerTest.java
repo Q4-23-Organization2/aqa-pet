@@ -33,9 +33,9 @@ public class MainRunnerTest {
         logger.info("Running testSortUsersByAge...");
         MainRunner.sortUsersByAge(users);
         // Проверяем первый элемент в отсортированном списке
-        Assert.assertEquals(users.get(0).getAge(), 15);
+        Assert.assertEquals(users.getFirst().getAge(), 15);
         // Проверяем последний элемент в отсортированном списке
-        Assert.assertEquals(users.get(users.size() - 1).getAge(), 60);
+        Assert.assertEquals(users.getLast().getAge(), 60);
         logger.info("The first user is the youngest");
         logger.info("The last user is the oldest");
     }
