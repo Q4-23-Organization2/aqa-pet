@@ -22,16 +22,16 @@ public class MainRunner {
 
     public static List<User> createUserList() {
         List<User> users = new ArrayList<>();
-        users.add(new User("Keanu", "Reeves", 25));
-        users.add(new User("Laurence", "Fishburne", 30));
-        users.add(new User("Carrie-Anne", "Moss", 17));
-        users.add(new User("Hugo", "Weaving", 22));
-        users.add(new User("Gloria", "Foster", 40));
-        users.add(new User("Joe", "Pantoliano", 35));
-        users.add(new User("Marcus", "Chong", 28));
-        users.add(new User("Julian", "Arahanga", 20));
-        users.add(new User("Matt", "Doran", 50));
-        users.add(new User("Belinda", "McClory", 15));
+        users.add(new User("Keanu", "Reeves", 15));
+        users.add(new User("Laurence", "Fishburne", 20));
+        users.add(new User("Carrie-Anne", "Moss", 25));
+        users.add(new User("Hugo", "Weaving", 30));
+        users.add(new User("Gloria", "Foster", 35));
+        users.add(new User("Joe", "Pantoliano", 40));
+        users.add(new User("Marcus", "Chong", 45));
+        users.add(new User("Julian", "Arahanga", 50));
+        users.add(new User("Matt", "Doran", 55));
+        users.add(new User("Belinda", "McClory", 60));
         return users;
     }
 
