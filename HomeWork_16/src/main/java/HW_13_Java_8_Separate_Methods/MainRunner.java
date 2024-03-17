@@ -25,12 +25,12 @@ public class MainRunner {
         users.add(new User("Keanu", "Reeves", 25));
         users.add(new User("Laurence", "Fishburne", 30));
         users.add(new User("Carrie-Anne", "Moss", 17));
-        users.add(new User("Keanu", "Weaving", 22));
+        users.add(new User("Hugo", "Weaving", 22));
         users.add(new User("Gloria", "Foster", 40));
         users.add(new User("Joe", "Pantoliano", 35));
         users.add(new User("Marcus", "Chong", 28));
         users.add(new User("Julian", "Arahanga", 20));
-        users.add(new User("Keanu", "Doran", 50));
+        users.add(new User("Matt", "Doran", 50));
         users.add(new User("Belinda", "McClory", 15));
         return users;
     }
