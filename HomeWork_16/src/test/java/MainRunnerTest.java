@@ -27,7 +27,8 @@ public class MainRunnerTest {
     }
 
     // Положительные тесты
-    @Test(description = "Checking the first and last user for age after sorting")
+    @Test(testName = "SortUsersByAgeFirstCase",
+            description = "Checking the first and last user for age after sorting")
     public void testSortUsersByAgeFirstCase() {
         logger.info("Running testSortUsersByAge...");
         MainRunner.sortUsersByAge(users);
@@ -39,7 +40,8 @@ public class MainRunnerTest {
         logger.info("The last user is the oldest");
     }
 
-    @Test(description = "Checking each user from the list for age after sorting with an interval of 5 years")
+    @Test(testName = "SortUsersByAgeSecondCase",
+            description = "Checking each user from the list for age after sorting with an interval of 5 years")
     public void testSortUsersByAgeSecondCase() {
         logger.info("Running testSortUsersByAge...");
         MainRunner.sortUsersByAge(users);
@@ -53,14 +55,16 @@ public class MainRunnerTest {
         logger.info("Each subsequent user is 5 years older than the previous one");
     }
 
-    @Test(description = "Calculate the average age of all users")
+    @Test(testName = "CalculateAverageAge",
+            description = "Calculate the average age of all users")
     public void testCalculateAverageAge() {
         logger.info("Running testCalculateAverageAge...");
         double averageAge = MainRunner.calculateAverageAge(users);
         Assert.assertEquals(averageAge, 37.5);
     }
 
-    @Test(description = "Checking that the total age is less than 400 years")
+    @Test(testName = "TotalAgeLessThan400",
+            description = "Checking that the total age is less than 400 years")
     public void testTotalAgeLessThan400() {
         logger.info("Running testTotalAgeLessThan400...");
         int totalAge = 0;
