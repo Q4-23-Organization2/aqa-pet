@@ -77,7 +77,9 @@ public class MainRunnerTest {
         logger.info("The total age of all users is less than 400 years");
     }
 
-    @Test(dataProvider = "firstUserParams", description = "Parameterized test with check for the first user of a sorted list")
+    @Test(testName = "SortUsersByNameAndAge_FirstUser",
+            dataProvider = "firstUserParams",
+            description = "Parameterized test with check for the first user of a sorted list")
     public void testSortUsersByNameAndAge_FirstUser(String expectedFirstName, int expectedAge) {
         logger.info("Running testSortUsersByNameAndAge_FirstUser...");
         // Создаем копию списка пользователей, чтобы избежать изменения исходного списка
@@ -125,7 +127,8 @@ public class MainRunnerTest {
 
     // Негативный тест на проверку пользователей, у которых фамилия начинается с буквы "S" или "А",
     // с возвращением пустого листа
-    @Test(dataProvider = "negativeTestData", description = "Negative test for checking users, returning an empty list")
+    @Test(dataProvider = "negativeTestData",
+            description = "Negative test for checking users, returning an empty list")
     public void testCheckUsersWithSorA(List<User> users) {
         logger.info("Running testCheckUsersWithSorA...");
         try {
