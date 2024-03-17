@@ -74,6 +74,7 @@ public class MainRunnerTest {
         }
         // Проверяем, что общий возраст меньше 400 лет
         Assert.assertTrue(totalAge < 400, "Total age should be less than 400 years");
+        logger.info("The total age of all users is less than 400 years");
     }
 
     @Test
