@@ -36,6 +36,8 @@ public class MainRunnerTest {
         Assert.assertEquals(users.get(0).getAge(), 15);
         // Проверяем последний элемент в отсортированном списке
         Assert.assertEquals(users.get(users.size() - 1).getAge(), 60);
+        logger.info("The first user is the youngest");
+        logger.info("The last user is the oldest");
     }
 
     @Test
@@ -50,6 +52,7 @@ public class MainRunnerTest {
             int expectedAge = i * 5 + 15; // Возраст должен увеличиваться на 5 с каждым следующим пользователем
             Assert.assertEquals(user.getAge(), expectedAge);
         }
+        logger.info("Each subsequent user is 5 years older than the previous one");
     }
 
     @Test
