@@ -85,7 +85,7 @@ public class MainRunnerTest {
         // Сортируем список и получаем отсортированный список
         sortedUsers = MainRunner.sortUsersByNameAndAge(sortedUsers);
         // Получаем первого пользователя после сортировки
-        User firstUser = sortedUsers.get(0);
+        User firstUser = sortedUsers.getFirst();
         // Проверяем параметры первого пользователя
         Assert.assertEquals(firstUser.getFirstName(), "Belinda"); // Проверяем, что первое имя в отсортированном списке это "Belinda"
         Assert.assertEquals(firstUser.getAge(), 60); // Проверяем, что возраст первого пользователя в отсортированном списке равен 60
