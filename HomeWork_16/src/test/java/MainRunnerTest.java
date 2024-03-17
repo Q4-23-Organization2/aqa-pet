@@ -16,12 +16,12 @@ public class MainRunnerTest {
     private List<User> users;
 
     @BeforeMethod
-    public void setUp() {
+    public void FillInUsersList() {
         users = MainRunner.createUserList();
     }
 
     @AfterMethod
-    public void tearDown1() {
+    public void ResetUsersList() {
         users = null;
     }
 
