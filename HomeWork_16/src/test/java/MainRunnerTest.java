@@ -79,6 +79,7 @@ public class MainRunnerTest {
     }
 
     @Test(dataProvider = "firstUserParams")
+    @Description("Parameterized test with check for the first user of a sorted list")
     public void testSortUsersByNameAndAge_FirstUser(String expectedFirstName, int expectedAge) {
         logger.info("Running testSortUsersByNameAndAge_FirstUser...");
         // Создаем копию списка пользователей, чтобы избежать изменения исходного списка
@@ -99,12 +100,31 @@ public class MainRunnerTest {
         };
     }
 
-    @Test
-    public void testSortUsersByNameAndAge_LastUser() {
-        logger.info("Running testSortUsersByNameAndAge_LastUser...");
-        MainRunner.sortUsersByNameAndAge(users);
-        // Проверяем последнего пользователя после сортировки
-        Assert.assertEquals(users.get(users.size() - 1).getAge(), 55);
+    @Test(dataProvider = "seventhUserParams")
+    @Description("Parameterized test with check for the seventh user of a sorted list")
+    public void testSortUsersByNameAndAge_SevenUser(String expectedFirstName, int expectedAge) {
+        logger.info("Running testSortUsersByNameAndAge_MiddleUser...");
+        // Создаем копию списка пользователей, чтобы избежать изменения исходного списка
+        List<User> sortedUsers = new ArrayList<>(users);
+        // Сортируем список и получаем отсортированный список
+        sortedUsers = MainRunner.sortUsersByNameAndAge(sortedUsers);
+        // Получаем пользователя в середине списка
+        User seventhUser = sortedUsers.get(sortedUsers.size() / 2 + 1);
+        // Проверяем параметры пользователя в середине списка
+        Assert.assertEquals(seventhUser.getFirstName(), expectedFirstName);
+        // Проверяем, что имя 7го пользователя в списке соответствует ожидаемому
+        Assert.assertEquals(seventhUser.getAge(), expectedAge);
+        // Проверяем, что возраст 7го пользователя в списке соответствует ожидаемому
+        logger.info("The 7th user from the sorted list is: "
+                + seventhUser.getFirstName() + " " + seventhUser.getSecondName()  + ", age: " + seventhUser.getAge());
+    }
+
+
+    @DataProvider(name = "seventhUserParams")
+    public Object[][] getMiddleUserParams() {
+        return new Object[][]{
+                {"Keanu", 15} // Ожидаемое имя и возраст пользователя в середине списка после сортировки
+        };
     }
 
     // Отрицательный тест
