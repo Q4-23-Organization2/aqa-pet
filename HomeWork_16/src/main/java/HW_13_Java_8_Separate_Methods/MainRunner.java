@@ -55,7 +55,7 @@ public class MainRunner {
         return averageAge;
     }
 
-    public static void sortUsersByNameAndAge(List<User> users) {
+    public static List<User> sortUsersByNameAndAge(List<User> users) {
         List<User> sortedByNameAndAge = users.stream()
                 .sorted(Comparator.comparing(User::getFirstName).thenComparing(User::getAge))
                 .collect(Collectors.toList());
@@ -63,6 +63,7 @@ public class MainRunner {
         logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         sortedByNameAndAge.forEach(user -> logger.info(user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge()));
         logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        return sortedByNameAndAge;
     }
 
     public static List<User> checkUsersWithSorA(List<User> users) {

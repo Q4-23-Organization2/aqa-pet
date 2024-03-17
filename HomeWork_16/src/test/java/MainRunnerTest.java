@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -77,12 +78,25 @@ public class MainRunnerTest {
         logger.info("The total age of all users is less than 400 years");
     }
 
-    @Test
-    public void testSortUsersByNameAndAge_FirstUser() {
+    @Test(dataProvider = "firstUserParams")
+    public void testSortUsersByNameAndAge_FirstUser(String expectedFirstName, int expectedAge) {
         logger.info("Running testSortUsersByNameAndAge_FirstUser...");
-        MainRunner.sortUsersByNameAndAge(users);
-        // Проверяем первого пользователя после сортировки
-        Assert.assertEquals(users.get(0).getFirstName(), "Belinda");
+        // Создаем копию списка пользователей, чтобы избежать изменения исходного списка
+        List<User> sortedUsers = new ArrayList<>(users);
+        // Сортируем список и получаем отсортированный список
+        sortedUsers = MainRunner.sortUsersByNameAndAge(sortedUsers);
+        // Получаем первого пользователя после сортировки
+        User firstUser = sortedUsers.get(0);
+        // Проверяем параметры первого пользователя
+        Assert.assertEquals(firstUser.getFirstName(), "Belinda"); // Проверяем, что первое имя в отсортированном списке это "Belinda"
+        Assert.assertEquals(firstUser.getAge(), 60); // Проверяем, что возраст первого пользователя в отсортированном списке равен 60
+    }
+
+    @DataProvider(name = "firstUserParams")
+    public Object[][] getFirstUserParams() {
+        return new Object[][]{
+                {"Belinda", 60} // Ожидаемое имя и возраст первого пользователя после сортировки
+        };
     }
 
     @Test
