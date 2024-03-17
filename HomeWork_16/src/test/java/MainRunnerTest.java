@@ -61,10 +61,32 @@ public class MainRunnerTest {
     }
 
     @Test
-    public void testSortUsersByNameAndAge() {
-        logger.info("Running testSortUsersByNameAndAge...");
+    @Description("Checking that the total age is less than 400 years")
+    public void testTotalAgeLessThan400() {
+        logger.info("Running testTotalAgeLessThan400...");
+        int totalAge = 0;
+        // Суммируем возраст каждого пользователя
+        for (User user : users) {
+            totalAge += user.getAge();
+        }
+        // Проверяем, что общий возраст меньше 400 лет
+        Assert.assertTrue(totalAge < 400, "Total age should be less than 400 years");
+    }
+
+    @Test
+    public void testSortUsersByNameAndAge_FirstUser() {
+        logger.info("Running testSortUsersByNameAndAge_FirstUser...");
         MainRunner.sortUsersByNameAndAge(users);
+        // Проверяем первого пользователя после сортировки
         Assert.assertEquals(users.get(0).getFirstName(), "Belinda");
+    }
+
+    @Test
+    public void testSortUsersByNameAndAge_LastUser() {
+        logger.info("Running testSortUsersByNameAndAge_LastUser...");
+        MainRunner.sortUsersByNameAndAge(users);
+        // Проверяем последнего пользователя после сортировки
+        Assert.assertEquals(users.get(users.size() - 1).getAge(), 55);
     }
 
     // Отрицательный тест
