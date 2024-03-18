@@ -164,7 +164,8 @@ public class MainRunnerTest {
         };
     }
 
-    @Test(description = "Checking that NOT all users elder than 18 years")
+    @Test(testName = "CheckNotAllUsersOlderThan18",
+            description = "Checking that NOT all users elder than 18 years")
     public void testCheckNotAllUsersOlderThan18() {
         List<User> users = MainRunner.createUserList(); // Получаем список пользователей
         logger.info("Running testCheckNotAllUsersOlderThan18...");
