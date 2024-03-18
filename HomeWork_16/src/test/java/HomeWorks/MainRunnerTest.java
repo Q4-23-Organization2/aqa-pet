@@ -1,4 +1,4 @@
-
+package HomeWorks;
 
 import HW_13_Java_8_Separate_Methods.MainRunner;
 import HW_13_Java_8_Separate_Methods.User;
@@ -11,24 +11,10 @@ import DataProvider.DataProviderClass;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-public class MainRunnerTest {
+public class MainRunnerTest extends CommonClass {
     private static final Logger logger = LogManager.getLogger(MainRunnerTest.class);
-    private List<User> users;
-
-    @BeforeMethod
-    public void FillInUsersList() {
-        users = MainRunner.createUserList();
-    }
-    //Пересоздание чистого листа юзеров перед каждым тестом, чтоб они не зависели друг от друга
-
-    @AfterMethod
-    public void ResetUsersList() {
-        users = null;
-    }
-    //Обнуление листа юзеров после каждого теста, чтоб они не зависели друг от друга)
 
     // Положительные тесты
     @Test(testName = "SortUsersByAgeFirstCase",

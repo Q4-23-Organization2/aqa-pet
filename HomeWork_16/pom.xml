@@ -17,6 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <log4j2.version>2.22.0</log4j2.version>
         <testng.version>7.9.0</testng.version>
+        <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
     </properties>
 
     <dependencies>
@@ -44,4 +45,13 @@
 
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                   <groupId>org.apache.maven.plugins</groupId>
+                   <artifactId>maven-surefire-plugin</artifactId>
+                   <version>${maven.surefire.plugin.version}</version>
+           </plugin>
+        </plugins>
+    </build>
 </project>
