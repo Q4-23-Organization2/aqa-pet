@@ -54,7 +54,8 @@ public class MainRunnerTest {
         for (int i = 0; i < users.size(); i++) {
             User user = users.get(i);
             int expectedAge = i * 5 + 15; // Возраст должен увеличиваться на 5 с каждым следующим пользователем
-            Assert.assertEquals(user.getAge(), expectedAge, "Each subsequent user is 5 years older than the previous one");
+            Assert.assertEquals(user.getAge(), expectedAge,
+                    "Each subsequent user is 5 years older than the previous one");
         }
         logger.info("Each subsequent user is 5 years older than the previous one");
     }
@@ -65,6 +66,7 @@ public class MainRunnerTest {
         logger.info("Running testCalculateAverageAge...");
         double averageAge = MainRunner.calculateAverageAge(users);
         Assert.assertEquals(averageAge, 37.5);
+        //проверка на совпадение результата среднего возраста пользователей
     }
 
     @Test(testName = "TotalAgeLessThan400",
@@ -72,11 +74,11 @@ public class MainRunnerTest {
     public void testTotalAgeLessThan400() {
         logger.info("Running testTotalAgeLessThan400...");
         int totalAge = 0;
-        // Суммируем возраст каждого пользователя
+        // Суммируем возраст всех пользователей
         for (User user : users) {
             totalAge += user.getAge();
         }
-        // Проверяем, что общий возраст меньше 400 лет
+        // Проверяем, что общий возраст всех пользователей меньше 400 лет
         Assert.assertTrue(totalAge < 400, "Total age should be less than 400 years");
         logger.info("The total age of all users is less than 400 years");
     }
@@ -93,8 +95,10 @@ public class MainRunnerTest {
         // Получаем первого пользователя после сортировки
         User firstUser = sortedUsers.getFirst();
         // Проверяем параметры первого пользователя
-        Assert.assertEquals(firstUser.getFirstName(), "Belinda"); // Проверяем, что первое имя в отсортированном списке это "Belinda"
-        Assert.assertEquals(firstUser.getAge(), 60); // Проверяем, что возраст первого пользователя в отсортированном списке равен 60
+        Assert.assertEquals(firstUser.getFirstName(), "Belinda");
+        // Проверяем, что первое имя в отсортированном списке это "Belinda"
+        Assert.assertEquals(firstUser.getAge(), 60);
+        // Проверяем, что возраст первого пользователя в отсортированном списке равен 60
     }
 
     @DataProvider(name = "firstUserParams")
@@ -104,34 +108,38 @@ public class MainRunnerTest {
         };
     }
 
-    @Test(dataProvider = "seventhUserParams", description = "Parameterized test with check for the seventh user of a sorted list")
+    @Test(testName = "SortUsersByNameAndAge_SeventhUser",
+            dataProvider = "seventhUserParams",
+            description = "Parameterized test with check for the seventh user of a sorted list")
     public void testSortUsersByNameAndAge_SeventhUser(String expectedFirstName, int expectedAge) {
         logger.info("Running testSortUsersByNameAndAge_MiddleUser...");
         // Создаем копию списка пользователей, чтобы избежать изменения исходного списка
         List<User> sortedUsers = new ArrayList<>(users);
         // Сортируем список и получаем отсортированный список
         sortedUsers = MainRunner.sortUsersByNameAndAge(sortedUsers);
-        // Получаем пользователя в середине списка
+        // Получаем седьмого пользователя из списка
         User seventhUser = sortedUsers.get(sortedUsers.size() / 2 + 1);
-        // Проверяем параметры пользователя в середине списка
+        // Проверяем параметры седьмого пользователя из списка
         Assert.assertEquals(seventhUser.getFirstName(), expectedFirstName);
-        // Проверяем, что имя 7го пользователя в списке соответствует ожидаемому
+        // Проверяем, что имя седьмого пользователя из списка соответствует ожидаемому
         Assert.assertEquals(seventhUser.getAge(), expectedAge);
-        // Проверяем, что возраст 7го пользователя в списке соответствует ожидаемому
+        // Проверяем, что возраст седьмого пользователя из списка соответствует ожидаемому
         logger.info("The 7th user from the sorted list is: "
-                + seventhUser.getFirstName() + " " + seventhUser.getSecondName()  + ", age: " + seventhUser.getAge());
+                + seventhUser.getFirstName() + " " + seventhUser.getSecondName()
+                + ", age: " + seventhUser.getAge());
     }
 
     @DataProvider(name = "seventhUserParams")
     public Object[][] getSeventhUserParams() {
         return new Object[][]{
-                {"Keanu", 15} // Ожидаемое имя и возраст пользователя в середине списка после сортировки
+                {"Keanu", 15} // Ожидаемое имя и возраст седьмого пользователя из списка после сортировки
         };
     }
 
     // Негативный тест на проверку пользователей, у которых фамилия начинается с буквы "S" или "А",
     // с возвращением пустого листа
-    @Test(dataProvider = "negativeTestData",
+    @Test(testName = "CheckUsersWithSorA",
+            dataProvider = "negativeTestData",
             description = "Negative test for checking users, returning an empty list")
     public void testCheckUsersWithSorA(List<User> users) {
         logger.info("Running testCheckUsersWithSorA...");
@@ -148,6 +156,8 @@ public class MainRunnerTest {
 
     @DataProvider(name = "negativeTestData")
     public Object[][] negativeTestData() {
+        //Возвращаем двумерный массив объектов, в котором первое значение 'null',
+        // а второй - это пустой лист, созданный при помощи коллекции 'Collections.emptyList()'
         return new Object[][]{
                 {null},
                 {Collections.emptyList()}
