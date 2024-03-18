@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
+import DataProvider.DataProviderClass;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class MainRunnerTest {
     public void FillInUsersList() {
         users = MainRunner.createUserList();
     }
-    //Пересоздание чистого листа юзеров перед каждым тестом, чтоб они не зависели друг от друга)
+    //Пересоздание чистого листа юзеров перед каждым тестом, чтоб они не зависели друг от друга
 
     @AfterMethod
     public void ResetUsersList() {
@@ -84,8 +84,9 @@ public class MainRunnerTest {
     }
 
     @Test(testName = "SortUsersByNameAndAge_FirstUser",
-            dataProvider = "firstUserParams",
-            description = "Parameterized test with check for the first user of a sorted list")
+            description = "Parameterized test with check for the first user of a sorted list",
+            dataProviderClass = DataProviderClass.class,
+            dataProvider = "getFirstUserParams")
     public void testSortUsersByNameAndAge_FirstUser(String expectedFirstName, int expectedAge) {
         logger.info("Running testSortUsersByNameAndAge_FirstUser...");
         // Создаем копию списка пользователей, чтобы избежать изменения исходного списка
@@ -103,8 +104,9 @@ public class MainRunnerTest {
 
 
     @Test(testName = "SortUsersByNameAndAge_SeventhUser",
-            dataProvider = "seventhUserParams",
-            description = "Parameterized test with check for the seventh user of a sorted list")
+            description = "Parameterized test with check for the seventh user of a sorted list",
+            dataProviderClass = DataProviderClass.class,
+            dataProvider = "getSeventhUserParams")
     public void testSortUsersByNameAndAge_SeventhUser(String expectedFirstName, int expectedAge) {
         logger.info("Running testSortUsersByNameAndAge_SeventhUser...");
         // Создаем копию списка пользователей, чтобы избежать изменения исходного списка
@@ -126,8 +128,9 @@ public class MainRunnerTest {
     // Негативный тест на проверку пользователей, у которых фамилия начинается с буквы "S" или "А",
     // с возвращением пустого листа
     @Test(testName = "CheckUsersWithSorA",
-            dataProvider = "negativeTestData",
-            description = "Negative test for checking users, returning an empty list")
+            description = "Negative test for checking users, returning an empty list",
+            dataProviderClass = DataProviderClass.class,
+            dataProvider = "negativeTestData")
     public void testCheckUsersWithSorA(List<User> users) {
         logger.info("Running testCheckUsersWithSorA...");
         try {

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="MainRunnerTest" time="0.82" tests="9" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="C:\!!!DATA\!!!HILLEL_Lessons\!QA Automation Testing\aqa-pet\HomeWork_16\target\test-classes;C:\!!!DATA\!!!HILLEL_Lessons\!QA Automation Testing\aqa-pet\HomeWork_16\target\classes;C:\Users\Kra$$ta$\.m2\repository\org\apache\logging\log4j\log4j-core\2.22.0\log4j-core-2.22.0.jar;C:\Users\Kra$$ta$\.m2\repository\org\apache\logging\log4j\log4j-api\2.22.0\log4j-api-2.22.0.jar;C:\Users\Kra$$ta$\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\Kra$$ta$\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Kra$$ta$\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Kra$$ta$\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Kiev"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\tmp\surefire860094242403252570\surefirebooter-20240318161121764_3.jar C:\tmp\surefire860094242403252570 2024-03-18T16-11-21_660-jvmRun1 surefire-20240318161121764_1tmp surefire_0-20240318161121764_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\!!!DATA\!!!HILLEL_Lessons\!QA Automation Testing\aqa-pet\HomeWork_16\target\test-classes;C:\!!!DATA\!!!HILLEL_Lessons\!QA Automation Testing\aqa-pet\HomeWork_16\target\classes;C:\Users\Kra$$ta$\.m2\repository\org\apache\logging\log4j\log4j-core\2.22.0\log4j-core-2.22.0.jar;C:\Users\Kra$$ta$\.m2\repository\org\apache\logging\log4j\log4j-api\2.22.0\log4j-api-2.22.0.jar;C:\Users\Kra$$ta$\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\Kra$$ta$\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\Kra$$ta$\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\Kra$$ta$\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Kra$$ta$"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-10-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\!!!DATA\!!!HILLEL_Lessons\!QA Automation Testing\aqa-pet\HomeWork_16"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\tmp\surefire860094242403252570\surefirebooter-20240318161121764_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.1+12-LTS-29"/>
+    <property name="user.name" value="Kra$$ta$"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Kra$$ta$\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\tmp\"/>
+    <property name="idea.version" value="2023.3.5"/>
+    <property name="java.version" value="21.0.1"/>
+    <property name="user.dir" value="C:\!!!DATA\!!!HILLEL_Lessons\!QA Automation Testing\aqa-pet\HomeWork_16"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Calibre2\;C:\Program Files\Java\jdk-21\bin;C:\Program Files\apache-maven-3.9.6\bin;C:\Program Files\Git\cmd;C:\Users\Kra$$ta$\AppData\Local\Microsoft\WindowsApps;C:\Users\Kra$$ta$\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Kra$$ta$\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.5\bin;;C:\Users\Kra$$ta$\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.1+12-LTS-29"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testCalculateAverageAge" classname="MainRunnerTest" time="0.011">
+    <system-out><![CDATA[16:11:22.673 [main] INFO  MainRunnerTest - Running testCalculateAverageAge...
+16:11:22.676 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Average age: 37.5
+16:11:22.676 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="testCheckNotAllUsersOlderThan18" classname="MainRunnerTest" time="0.003">
+    <system-out><![CDATA[16:11:22.681 [main] INFO  MainRunnerTest - Running testCheckNotAllUsersOlderThan18...
+16:11:22.682 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - All users older than 18: false
+16:11:22.683 [main] INFO  MainRunnerTest - Younger than 18 user: Keanu Reeves, age: 15
+]]></system-out>
+  </testcase>
+  <testcase name="testCheckUsersWithSorA[null](1)" classname="MainRunnerTest" time="0.005">
+    <failure message="NullPointerException occurred: Cannot invoke &quot;java.util.List.stream()&quot; because &quot;users&quot; is null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: NullPointerException occurred: Cannot invoke "java.util.List.stream()" because "users" is null
+	at org.testng.Assert.fail(Assert.java:111)
+	at MainRunnerTest.testCheckUsersWithSorA(MainRunnerTest.java:143)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[16:11:22.692 [main] INFO  MainRunnerTest - Running testCheckUsersWithSorA...
+16:11:22.692 [main] ERROR MainRunnerTest - NullPointerException occurred: Cannot invoke "java.util.List.stream()" because "users" is null
+]]></system-out>
+  </testcase>
+  <testcase name="testCheckUsersWithSorA[[]](2)" classname="MainRunnerTest" time="0.003">
+    <system-out><![CDATA[16:11:22.697 [main] INFO  MainRunnerTest - Running testCheckUsersWithSorA...
+16:11:22.698 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Users with S or A: false
+16:11:22.698 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+]]></system-out>
+  </testcase>
+  <testcase name="testSortUsersByAgeFirstCase" classname="MainRunnerTest" time="0.005">
+    <system-out><![CDATA[16:11:22.701 [main] INFO  MainRunnerTest - Running testSortUsersByAge...
+16:11:22.701 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Sorted by age:
+16:11:22.701 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Keanu Reeves, age: 15
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Laurence Fishburne, age: 20
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Carrie-Anne Moss, age: 25
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Hugo Weaving, age: 30
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Gloria Foster, age: 35
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Joe Pantoliano, age: 40
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Marcus Chong, age: 45
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Julian Arahanga, age: 50
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Matt Doran, age: 55
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Belinda McClory, age: 60
+16:11:22.702 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+16:11:22.703 [main] INFO  MainRunnerTest - The first user is the youngest
+16:11:22.703 [main] INFO  MainRunnerTest - The last user is the oldest
+]]></system-out>
+  </testcase>
+  <testcase name="testSortUsersByAgeSecondCase" classname="MainRunnerTest" time="0.003">
+    <system-out><![CDATA[16:11:22.706 [main] INFO  MainRunnerTest - Running testSortUsersByAge...
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Sorted by age:
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Keanu Reeves, age: 15
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Laurence Fishburne, age: 20
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Carrie-Anne Moss, age: 25
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Hugo Weaving, age: 30
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Gloria Foster, age: 35
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Joe Pantoliano, age: 40
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Marcus Chong, age: 45
+16:11:22.707 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Julian Arahanga, age: 50
+16:11:22.708 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Matt Doran, age: 55
+16:11:22.708 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Belinda McClory, age: 60
+16:11:22.708 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+16:11:22.708 [main] INFO  MainRunnerTest - Each subsequent user is 5 years older than the previous one
+]]></system-out>
+  </testcase>
+  <testcase name="testSortUsersByNameAndAge_FirstUser[Belinda, 60](1)" classname="MainRunnerTest" time="0.005">
+    <system-out><![CDATA[16:11:22.712 [main] INFO  MainRunnerTest - Running testSortUsersByNameAndAge_FirstUser...
+16:11:22.713 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Sorted by name and age:
+16:11:22.713 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+16:11:22.713 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Belinda McClory, age: 60
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Carrie-Anne Moss, age: 25
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Gloria Foster, age: 35
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Hugo Weaving, age: 30
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Joe Pantoliano, age: 40
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Julian Arahanga, age: 50
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Keanu Reeves, age: 15
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Laurence Fishburne, age: 20
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Marcus Chong, age: 45
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Matt Doran, age: 55
+16:11:22.714 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+]]></system-out>
+  </testcase>
+  <testcase name="testSortUsersByNameAndAge_SeventhUser[Keanu, 15](1)" classname="MainRunnerTest" time="0.006">
+    <system-out><![CDATA[16:11:22.719 [main] INFO  MainRunnerTest - Running testSortUsersByNameAndAge_SeventhUser...
+16:11:22.719 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Sorted by name and age:
+16:11:22.719 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+16:11:22.719 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Belinda McClory, age: 60
+16:11:22.719 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Carrie-Anne Moss, age: 25
+16:11:22.720 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Gloria Foster, age: 35
+16:11:22.720 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Hugo Weaving, age: 30
+16:11:22.720 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Joe Pantoliano, age: 40
+16:11:22.720 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Julian Arahanga, age: 50
+16:11:22.720 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Keanu Reeves, age: 15
+16:11:22.720 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Laurence Fishburne, age: 20
+16:11:22.720 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Marcus Chong, age: 45
+16:11:22.720 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - Matt Doran, age: 55
+16:11:22.720 [main] INFO  HW_13_Java_8_Separate_Methods.MainRunner - ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+16:11:22.720 [main] INFO  MainRunnerTest - The 7th user from the sorted list is: Keanu Reeves, age: 15
+]]></system-out>
+  </testcase>
+  <testcase name="testTotalAgeLessThan400" classname="MainRunnerTest" time="0.006">
+    <system-out><![CDATA[16:11:22.728 [main] INFO  MainRunnerTest - Running testTotalAgeLessThan400...
+16:11:22.729 [main] INFO  MainRunnerTest - The total age of all users is less than 400 years
+]]></system-out>
+  </testcase>
+</testsuite>

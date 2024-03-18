@@ -6,14 +6,14 @@ import java.util.Collections;
 
 public class DataProviderClass {
 
-    @DataProvider(name = "firstUserParams")
+    @DataProvider
     public Object[][] getFirstUserParams() {
         return new Object[][]{
                 {"Belinda", 60} // Ожидаемое имя и возраст первого пользователя после сортировки
         };
     }
 
-    @DataProvider(name = "seventhUserParams")
+    @DataProvider
     public Object[][] getSeventhUserParams() {
         return new Object[][]{
                 {"Keanu", 15} // Ожидаемое имя и возраст седьмого пользователя из списка после сортировки
