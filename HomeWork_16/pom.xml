@@ -55,6 +55,8 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>testNGPositive.xml</suiteXmlFile>
                         <suiteXmlFile>testNGNegative.xml</suiteXmlFile>
+                        <!--Я помню, что мы на практике не будем запускать отсюда сразу два сьюта.
+                        Один можно закоммитить.-->
                     </suiteXmlFiles>
                 </configuration>
            </plugin>
