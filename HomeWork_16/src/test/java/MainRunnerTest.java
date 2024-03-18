@@ -1,3 +1,5 @@
+package java;
+
 import HW_13_Java_8_Separate_Methods.MainRunner;
 import HW_13_Java_8_Separate_Methods.User;
 import org.apache.logging.log4j.LogManager;
@@ -154,16 +156,17 @@ public class MainRunnerTest {
     public void testCheckNotAllUsersOlderThan18() {
         List<User> users = MainRunner.createUserList(); // Получаем список пользователей
         logger.info("Running testCheckNotAllUsersOlderThan18...");
-        boolean allOlderThan18 = MainRunner.checkAllUsersOlderThan18(users);
-        // Проверяем, все ли пользователи старше 18 лет
+        boolean allOlderThan18 = MainRunner.checkAllUsersOlderThan18(users); // Проверяем, все ли пользователи старше 18 лет
+
+        // Проверяем, что не все пользователи старше 18 лет
+        Assert.assertTrue(!allOlderThan18, "Not all users are older than 18 years.");
 
         // Если не все пользователи старше 18 лет, найдем пользователя младше 18 лет и выведем его информацию
         if (!allOlderThan18) {
             for (User user : users) {
                 if (user.getAge() < 18) {
-                    logger.info("Younger than 18 years user is: " + user.getFirstName() + " "
-                            + user.getSecondName() + ", age: " + user.getAge());
-                    break; // Завершаем цикл после нахождения пользователя младше 18 лет
+                    logger.info("Younger than 18 user: " + user.getFirstName() + " " + user.getSecondName() + ", age: " + user.getAge());
+                    return; // Пользователь найден, тест успешно завершен
                 }
             }
         }
