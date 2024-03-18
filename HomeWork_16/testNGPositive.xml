@@ -2,9 +2,7 @@
 <suite name="HW_16_Positive_Suite">
     <test name="HW_16_Positive_Test">
         <classes>
-            <class name="com.example.MyTestClass1"/>
-            <class name="com.example.MyTestClass2"/>
-            <!-- Добавьте сюда другие классы тестов -->
+            <class name="HomeWorks.TestRunnerPositive"/>
         </classes>
     </test>
 </suite>

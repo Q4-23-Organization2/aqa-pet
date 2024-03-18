@@ -2,8 +2,6 @@ package HomeWorks;
 
 import HW_13_Java_8_Separate_Methods.MainRunner;
 import HW_13_Java_8_Separate_Methods.User;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import DataProvider.DataProviderClass;
 import org.testng.annotations.Test;
@@ -11,10 +9,10 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PositiveTestRunner extends CommonClass {
+public class TestRunnerPositive extends CommonClass {
 
     // Положительные тесты
-    @Test(testName = "SortUsersByAgeFirstCase",
+    @Test(testName = "(1)SortUsersByAgeFirstCase",
             description = "Checking the first and last user for age after sorting")
     public void testSortUsersByAgeFirstCase() {
         logger.info("Running testSortUsersByAge...");
@@ -27,7 +25,7 @@ public class PositiveTestRunner extends CommonClass {
         logger.info("The last user is the oldest");
     }
 
-    @Test(testName = "SortUsersByAgeSecondCase",
+    @Test(testName = "(2)SortUsersByAgeSecondCase",
             description = "Checking each user from the list for age after sorting with an interval of 5 years")
     public void testSortUsersByAgeSecondCase() {
         logger.info("Running testSortUsersByAge...");
@@ -43,7 +41,7 @@ public class PositiveTestRunner extends CommonClass {
         logger.info("Each subsequent user is 5 years older than the previous one");
     }
 
-    @Test(testName = "CalculateAverageAge",
+    @Test(testName = "(3)CalculateAverageAge",
             description = "Calculate the average age of all users")
     public void testCalculateAverageAge() {
         logger.info("Running testCalculateAverageAge...");
@@ -52,7 +50,7 @@ public class PositiveTestRunner extends CommonClass {
         //проверка на совпадение результата среднего возраста пользователей
     }
 
-    @Test(testName = "TotalAgeLessThan400",
+    @Test(testName = "(4)TotalAgeLessThan400",
             description = "Checking that the total age is less than 400 years")
     public void testTotalAgeLessThan400() {
         logger.info("Running testTotalAgeLessThan400...");
@@ -66,7 +64,7 @@ public class PositiveTestRunner extends CommonClass {
         logger.info("The total age of all users is less than 400 years");
     }
 
-    @Test(testName = "SortUsersByNameAndAge_FirstUser",
+    @Test(testName = "(5)SortUsersByNameAndAge_FirstUser",
             description = "Parameterized test with check for the first user of a sorted list",
             dataProviderClass = DataProviderClass.class,
             dataProvider = "getFirstUserParams")
@@ -86,7 +84,7 @@ public class PositiveTestRunner extends CommonClass {
     }
 
 
-    @Test(testName = "SortUsersByNameAndAge_SeventhUser",
+    @Test(testName = "(6)SortUsersByNameAndAge_SeventhUser",
             description = "Parameterized test with check for the seventh user of a sorted list",
             dataProviderClass = DataProviderClass.class,
             dataProvider = "getSeventhUserParams")
@@ -109,7 +107,7 @@ public class PositiveTestRunner extends CommonClass {
     }
 
 
-    @Test(testName = "CheckNotAllUsersOlderThan18",
+    @Test(testName = "(7)CheckNotAllUsersOlderThan18",
             description = "Checking that NOT all users elder than 18 years")
     public void testCheckNotAllUsersOlderThan18() {
         List<User> users = MainRunner.createUserList(); // Получаем список пользователей

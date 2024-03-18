@@ -12,7 +12,7 @@ import java.util.List;
 public class CommonClass {
     protected List<User> users;
 
-    protected static final Logger logger = LogManager.getLogger(PositiveTestRunner.class);
+    protected static final Logger logger = LogManager.getLogger(TestRunnerPositive.class);
 
     @BeforeMethod
     public void FillInUsersList() {

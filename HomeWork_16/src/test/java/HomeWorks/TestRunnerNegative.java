@@ -10,10 +10,10 @@ import java.util.List;
 
 import static HomeWorks.CommonClass.logger;
 
-public class NegativeTestRunner {
+public class TestRunnerNegative {
     // Негативный тест на проверку пользователей, у которых фамилия начинается с буквы "S" или "А",
     // с возвращением пустого листа
-    @Test(testName = "CheckUsersWithSorA",
+    @Test(testName = "(8)CheckUsersWithSorA",
             description = "Negative test for checking users, returning an empty list",
             dataProviderClass = DataProviderClass.class,
             dataProvider = "negativeTestData")

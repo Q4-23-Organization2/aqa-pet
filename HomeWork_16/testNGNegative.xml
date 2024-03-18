@@ -1,13 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="HW_16_Negative_Suite">
     <test name="HW_16_Negative_Test">
-        <packages>
-          <package name="HomeWorks"></package>  
-        </packages>
         <classes>
-            <class name="HomeWorks.PositiveTestRunner"/>
-            <class name="com.example.MyTestClass2"/>
-            <!-- Добавьте сюда другие классы тестов -->
+            <class name="HomeWorks.TestRunnerNegative"/>
         </classes>
     </test>
 </suite>
