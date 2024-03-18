@@ -5,16 +5,13 @@ import HW_13_Java_8_Separate_Methods.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import DataProvider.DataProviderClass;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainRunnerTest extends CommonClass {
-    private static final Logger logger = LogManager.getLogger(MainRunnerTest.class);
+public class PositiveTestRunner extends CommonClass {
 
     // Положительные тесты
     @Test(testName = "SortUsersByAgeFirstCase",
@@ -111,24 +108,6 @@ public class MainRunnerTest extends CommonClass {
                 + ", age: " + seventhUser.getAge());
     }
 
-    // Негативный тест на проверку пользователей, у которых фамилия начинается с буквы "S" или "А",
-    // с возвращением пустого листа
-    @Test(testName = "CheckUsersWithSorA",
-            description = "Negative test for checking users, returning an empty list",
-            dataProviderClass = DataProviderClass.class,
-            dataProvider = "negativeTestData")
-    public void testCheckUsersWithSorA(List<User> users) {
-        logger.info("Running testCheckUsersWithSorA...");
-        try {
-            List<User> result = MainRunner.checkUsersWithSorA(users);
-            // Проверяем, что результат пустой (список пользователей с фамилией, начинающейся на 'S' или 'A')
-            Assert.assertTrue(result.isEmpty());
-        } catch (NullPointerException e) {
-            // Если было сгенерировано исключение NullPointerException, возвращаем пустой список
-            logger.error("NullPointerException occurred: " + e.getMessage());
-            Assert.fail("NullPointerException occurred: " + e.getMessage());
-        }
-    }
 
     @Test(testName = "CheckNotAllUsersOlderThan18",
             description = "Checking that NOT all users elder than 18 years")

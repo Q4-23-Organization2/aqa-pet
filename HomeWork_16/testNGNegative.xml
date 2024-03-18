@@ -5,7 +5,7 @@
           <package name="HomeWorks"></package>  
         </packages>
         <classes>
-            <class name="HomeWorks.MainRunnerTest"/>
+            <class name="HomeWorks.PositiveTestRunner"/>
             <class name="com.example.MyTestClass2"/>
             <!-- Добавьте сюда другие классы тестов -->
         </classes>
