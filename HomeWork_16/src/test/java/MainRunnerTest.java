@@ -112,7 +112,7 @@ public class MainRunnerTest {
             dataProvider = "seventhUserParams",
             description = "Parameterized test with check for the seventh user of a sorted list")
     public void testSortUsersByNameAndAge_SeventhUser(String expectedFirstName, int expectedAge) {
-        logger.info("Running testSortUsersByNameAndAge_MiddleUser...");
+        logger.info("Running testSortUsersByNameAndAge_SeventhUser...");
         // Создаем копию списка пользователей, чтобы избежать изменения исходного списка
         List<User> sortedUsers = new ArrayList<>(users);
         // Сортируем список и получаем отсортированный список
