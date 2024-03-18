@@ -22,11 +22,13 @@ public class MainRunnerTest {
     public void FillInUsersList() {
         users = MainRunner.createUserList();
     }
+    //Пересоздание чистого листа юзеров перед каждым тестом, чтоб они не зависели друг от друга)
 
     @AfterMethod
     public void ResetUsersList() {
         users = null;
     }
+    //Обнуление листа юзеров после каждого теста, чтоб они не зависели друг от друга)
 
     // Положительные тесты
     @Test(testName = "SortUsersByAgeFirstCase",
