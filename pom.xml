@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>HomeWork_16_TestNG</module>
+        <module>HomeWork_16</module>
     </modules>
 
     <properties>
