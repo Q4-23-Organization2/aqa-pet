@@ -9,7 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>HomeWork_11_Maven</module>
         <module>HomeWork_17_SeleniumWD_Basic</module>
     </modules>
 

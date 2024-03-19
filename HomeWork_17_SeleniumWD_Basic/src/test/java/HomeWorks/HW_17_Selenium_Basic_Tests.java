@@ -14,6 +14,6 @@ public class HW_17_Selenium_Basic_Tests {
 
     @Test
     public void () {
-
+        System.out.println("Hallo");
     }
 }
