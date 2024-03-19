@@ -16,6 +16,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <log4j2.version>2.22.0</log4j2.version>
+        <slf4j.version>1.7.13</slf4j.version>
         <testng.version>7.9.0</testng.version>
         <selenium.version>4.18.1</selenium.version>
     </properties>
@@ -34,6 +35,12 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>${log4j2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-nop</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
