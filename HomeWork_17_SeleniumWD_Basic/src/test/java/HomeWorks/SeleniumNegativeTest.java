@@ -21,7 +21,7 @@ public class SeleniumNegativeTest {
         driver.manage().window().maximize();
     }
     @Test
-    public void KrasTest() {
+    public void TestWithIncorrectData() {
         driver.get("https://the-internet.herokuapp.com/login");
 
         driver.findElement(By.xpath("//input[@id='username']"))

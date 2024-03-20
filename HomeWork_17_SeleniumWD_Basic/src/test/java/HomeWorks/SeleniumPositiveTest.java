@@ -21,12 +21,15 @@ public class SeleniumPositiveTest {
         driver.manage().window().maximize();
     }
     @Test
-    public void KrasTest() {
+    public void TestWithCorrectData() {
         driver.get("https://the-internet.herokuapp.com/login");
 
-        driver.findElement(By.xpath("//input[@id='username']")).sendKeys("tomsmith");
-        driver.findElement(By.xpath("//input[@id='password']")).sendKeys("SuperSecretPassword!");
-        driver.findElement(By.xpath("//button[@class='radius']")).click();
+        driver.findElement(By.xpath("//input[@id='username']"))
+                .sendKeys("tomsmith");
+        driver.findElement(By.xpath("//input[@id='password']"))
+                .sendKeys("SuperSecretPassword!");
+        driver.findElement(By.xpath("//button[@class='radius']"))
+                .click();
 
         WebElement el = driver.findElement(By.xpath("//div[@id='flash']"));
 
