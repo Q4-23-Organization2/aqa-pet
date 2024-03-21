@@ -8,9 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static HomeWorks.CommonClass.logger;
-
-public class TestRunnerNegative {
+public class TestRunnerNegative extends CommonClass {
     // Негативный тест на проверку пользователей, у которых фамилия начинается с буквы "S" или "А",
     // с возвращением пустого листа
     @Test(testName = "(8)CheckUsersWithSorA",
