@@ -24,6 +24,6 @@ public class SeleniumPositiveTest extends CommonConditions {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String str = js.executeScript("return arguments[0].firstChild.textContent", el).toString();
-        logger.info(str + "You have entered the correct username or password!");
+        logger.info(str + "You have entered the correct username and password!");
     }
 }
