@@ -9,6 +9,8 @@ public class SeleniumPositiveTest extends CommonConditions {
 
     @Test
     public void TestWithCorrectData() {
+
+        logger.info("Running Test with Correct Data...");
         driver.get("https://the-internet.herokuapp.com/login");
 
         driver.findElement(By.xpath("//input[@id='username']"))
@@ -22,6 +24,6 @@ public class SeleniumPositiveTest extends CommonConditions {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String str = js.executeScript("return arguments[0].firstChild.textContent", el).toString();
-        System.out.println("The message is: " + str);
+        logger.info(str + "You have entered the correct username or password!");
     }
 }

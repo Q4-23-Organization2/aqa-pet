@@ -9,6 +9,8 @@ public class SeleniumNegativeTest extends CommonConditions {
 
     @Test
     public void TestWithIncorrectData() {
+
+        logger.info("Running Test with Incorrect Data...");
         driver.get("https://the-internet.herokuapp.com/login");
 
         driver.findElement(By.xpath("//input[@id='username']"))
@@ -22,6 +24,6 @@ public class SeleniumNegativeTest extends CommonConditions {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String str = js.executeScript("return arguments[0].firstChild.textContent", el).toString();
-        System.out.println("The message is: " + str);
+        logger.error(str + "You entered an incorrect login or password!");
     }
 }
