@@ -13,7 +13,6 @@ package HomeWork_11;
         try {
             gameItemsChoice = GameItems.valueOf(input);
         } catch (IllegalArgumentException e) {
-akeChoice(scanner);
-        }   // При помощи конструкции (try - catch) просим ввести корректное значение
+При помощи конструкции (try - catch) просим ввести корректное значение
     }
 }
