@@ -12,7 +12,7 @@ public class CommonConditions {
     protected static final Logger logger = (Logger) LogManager.getLogger(CommonConditions.class);
     protected static final By MESSAGE = By.xpath("//div[@id='flash']");
     protected static final String ALERT_BASE_LOCATOR = "//button[@onclick='%s']";
-    protected final String LOGIN_PAGE_URL = "https://the-internet.herokuapp.com/login";
+    protected static final String LOGIN_PAGE_URL = "https://the-internet.herokuapp.com/login";
     @BeforeMethod
     public void initBrowser() {
         driver = new ChromeDriver();
