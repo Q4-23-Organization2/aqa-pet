@@ -1,5 +1,6 @@
 package HomeWork_11;
 
+
     public void startGame() {
         Scanner scanner = new Scanner(System.in);
         int countOfPlayers = 0;
@@ -8,6 +9,7 @@ package HomeWork_11;
         // Цикл do-while для запроса количества игроков (2 или 3)
         do {
             try {
+
             }
         } while (countOfPlayers != 2 && countOfPlayers != 3);
 
@@ -19,6 +21,7 @@ package HomeWork_11;
             for (int i = 0; i < countOfPlayers; i++) {
                 if (!isDraw) {
                     // Если была ничья, то не делается повторный запрос имён игроков, а сразу переходит к повторным выборам предметов.
+
                     String name = scanner.nextLine();
                     gamePlayers[i] = new HumanPlayer(name);
                 }
