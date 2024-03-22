@@ -10,6 +10,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>HomeWork_11_Maven</module>
+        <module>HomeWork_16</module>
+        <module>HomeWork_17_SeleniumWD_Basic</module>
     </modules>
 
     <properties>
