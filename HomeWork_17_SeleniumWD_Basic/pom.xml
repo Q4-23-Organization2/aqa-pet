@@ -18,6 +18,7 @@
         <log4j2.version>2.22.0</log4j2.version>
         <slf4j.version>1.7.13</slf4j.version>
         <testng.version>7.9.0</testng.version>
+        <selenium.version>4.18.1</selenium.version>
         <maven.surefire.plugin.version>3.2.5</maven.surefire.plugin.version>
     </properties>
 
@@ -42,6 +43,7 @@
             <artifactId>slf4j-nop</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -50,6 +52,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -69,4 +77,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
