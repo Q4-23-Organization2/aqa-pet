@@ -15,6 +15,10 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<<<<<<< HEAD
     </properties>
 
 </project>
+=======
+
+>>>>>>> 5b0be71c0a15ceb3016f571f62fefb9d0c05c091

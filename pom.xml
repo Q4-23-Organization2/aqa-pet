@@ -9,7 +9,10 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+<<<<<<< HEAD
         <module>HomeWork_11_Maven</module>
+=======
+>>>>>>> 5b0be71c0a15ceb3016f571f62fefb9d0c05c091
     </modules>
 
     <properties>
@@ -17,5 +20,9 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5b0be71c0a15ceb3016f571f62fefb9d0c05c091
     
 </project>
