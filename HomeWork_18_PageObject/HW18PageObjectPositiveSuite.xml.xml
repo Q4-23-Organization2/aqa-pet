@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="HW_18_PageObject_Positive_Suite">
-    <test name="HW_18_PageObject_Positive_Test">
+<suite name="HW18PageObjectPositiveSuite">
+    <test name="HW18PageObjectPositiveTest">
         <classes>
             <class name="HomeWorks.HW18PageObjectPositiveTest"/>
         </classes>
