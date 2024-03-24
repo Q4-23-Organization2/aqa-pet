@@ -68,8 +68,8 @@
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>SeleniumPositiveSuite.xml</suiteXmlFile>
-                        <suiteXmlFile>SeleniumNegativeSuite.xml</suiteXmlFile>
+                        <suiteXmlFile>HW_17_SeleniumPositiveSuite.xml</suiteXmlFile>
+                        <suiteXmlFile>HW_17_SeleniumNegativeSuite.xml</suiteXmlFile>
                         <!--Я помню, что мы на практике не будем запускать отсюда сразу два сьюта.
                         Один можно закоммитить.-->
                     </suiteXmlFiles>

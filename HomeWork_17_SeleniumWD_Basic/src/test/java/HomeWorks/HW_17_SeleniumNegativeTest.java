@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class SeleniumNegativeTest extends CommonConditions {
+public class HW_17_SeleniumNegativeTest extends HW_17_CommonConditions {
 
     @Test
     public void TestWithIncorrectData() {

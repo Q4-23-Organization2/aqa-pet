@@ -68,8 +68,8 @@
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>PageObjectPositiveSuite.xml</suiteXmlFile>
-                        <suiteXmlFile>PageObjectNegativeSuite.xml</suiteXmlFile>
+                        <suiteXmlFile>HW_18_PageObjectPositiveSuite.xml</suiteXmlFile>
+                        <suiteXmlFile>HW_18_PageObjectNegativeSuite.xml</suiteXmlFile>
                         <!--Я помню, что мы на практике не будем запускать отсюда сразу два сьюта.
                         Один можно закоммитить.-->
                     </suiteXmlFiles>
