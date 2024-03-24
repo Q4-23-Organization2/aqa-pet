@@ -2,7 +2,7 @@
 <suite name="HW_18_PageObject_Positive_Suite">
     <test name="HW_18_PageObject_Positive_Test">
         <classes>
-            <class name="HomeWorks.HW_18_PageObjectPositiveTest"/>
+            <class name="HomeWorks.HW18PageObjectPositiveTest"/>
         </classes>
     </test>
 </suite>

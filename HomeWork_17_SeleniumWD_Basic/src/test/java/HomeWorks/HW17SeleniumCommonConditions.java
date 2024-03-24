@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-public class HW_17_CommonConditions {
+public class HW17SeleniumCommonConditions {
     protected WebDriver driver;
-    protected static final Logger logger = (Logger) LogManager.getLogger(HW_17_CommonConditions.class);
+    protected static final Logger logger = (Logger) LogManager.getLogger(HW17SeleniumCommonConditions.class);
     protected static final By MESSAGE = By.xpath("//div[@id='flash']");
     protected static final String ALERT_BASE_LOCATOR = "//button[@onclick='%s']";
     protected static final String LOGIN_PAGE_URL = "https://the-internet.herokuapp.com/login";

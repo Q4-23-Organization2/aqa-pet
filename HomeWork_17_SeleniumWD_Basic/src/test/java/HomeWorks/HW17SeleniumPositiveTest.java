@@ -5,18 +5,18 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class HW_17_SeleniumNegativeTest extends HW_17_CommonConditions {
+public class HW17SeleniumPositiveTest extends HW17SeleniumCommonConditions {
 
     @Test
-    public void TestWithIncorrectData() {
+    public void TestWithCorrectData() {
 
-        logger.info("Running Test with Incorrect Data...");
+        logger.info("Running Test with Correct Data...");
         driver.get("https://the-internet.herokuapp.com/login");
 
         driver.findElement(By.xpath("//input[@id='username']"))
-                .sendKeys("IncorrectUserName");
+                .sendKeys("tomsmith");
         driver.findElement(By.xpath("//input[@id='password']"))
-                .sendKeys("IncorrectPassword!");
+                .sendKeys("SuperSecretPassword!");
         driver.findElement(By.xpath("//button[@class='radius']"))
                 .click();
 
@@ -24,6 +24,6 @@ public class HW_17_SeleniumNegativeTest extends HW_17_CommonConditions {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
         String str = js.executeScript("return arguments[0].firstChild.textContent", el).toString();
-        logger.error(str + "You entered an incorrect login or password!");
+        logger.info(str + "You have entered the correct username and password!");
     }
 }
