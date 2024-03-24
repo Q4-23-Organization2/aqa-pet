@@ -9,6 +9,10 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>HomeWork_11_Maven</module>
+        <module>HomeWork_16</module>
+        <module>HomeWork_17_SeleniumWD_Basic</module>
+        <module>HomeWork_18_PageObject</module>
     </modules>
 
     <properties>
@@ -16,6 +20,5 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     
 </project>

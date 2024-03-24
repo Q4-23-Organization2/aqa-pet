@@ -2,7 +2,7 @@
 <suite name="HW_17_Selenium_Negative_Suite">
     <test name="HW_17_Selenium_Negative_Test">
         <classes>
-            <class name="HomeWorks.SeleniumNegativeTest"/>
+            <class name="HomeWorks.HW17SeleniumNegativeTest"/>
         </classes>
     </test>
 </suite>
