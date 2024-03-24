@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HW18PageObjectNegativeSuite">
+    <test name="HW18PageObjectNegativeTest">
+        <classes>
+            <class name="HomeWorks.HW18PageObjectNegativeTest"/>
+        </classes>
+    </test>
+</suite>

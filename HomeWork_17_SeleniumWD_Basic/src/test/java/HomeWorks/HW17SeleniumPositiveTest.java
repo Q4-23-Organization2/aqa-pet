@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class SeleniumPositiveTest extends CommonConditions {
+public class HW17SeleniumPositiveTest extends HW17SeleniumCommonConditions {
 
     @Test
     public void TestWithCorrectData() {
