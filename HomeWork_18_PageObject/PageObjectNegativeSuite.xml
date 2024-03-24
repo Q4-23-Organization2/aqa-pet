@@ -2,7 +2,7 @@
 <suite name="HW_18_PageObject_Negative_Suite">
     <test name="HW_18_PageObject_Negative_Test">
         <classes>
-            <class name="HomeWorks.HomeWorks.SeleniumNegativeTest"/>
+            <class name="HomeWorks.SeleniumNegativeTest"/>
         </classes>
     </test>
 </suite>
