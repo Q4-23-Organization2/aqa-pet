@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="HW_17_Selenium_Positive_Suite">
-    <test name="HW_17_Selenium_Positive_Test">
-        <classes>
-            <class name="HomeWorks.SeleniumPositiveTest"/>
-        </classes>
-    </test>
-</suite>
