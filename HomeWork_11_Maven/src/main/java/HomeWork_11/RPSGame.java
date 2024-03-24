@@ -20,7 +20,7 @@ public class RPSGame {
                 }
             } catch (NumberFormatException e) {
                 System.out.println("The number cannot be non-integer!");
-                //Тут проверка не нецелое число при помощи (try -catch) с сообщением.
+                //Тут проверка на нецелое число при помощи (try -catch) с сообщением.
             }
         } while (countOfPlayers != 2 && countOfPlayers != 3);
 
