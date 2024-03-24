@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="HW17SeleniumNegativeSuite">
+    <test name="HW17SeleniumNegativeTest">
+        <classes>
+            <class name="HomeWorks.HW17SeleniumNegativeTest"/>
+        </classes>
+    </test>
+</suite>
