@@ -28,13 +28,13 @@ public class HW18PageObjectCommonConditions {
         options.addArguments("--disable-extensions");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(3));
     }
 
-/*    @AfterMethod
+    @AfterMethod
     public void closeDriver (){
         if(driver != null) {
             driver.quit();
         }
-    }*/
+    }
 }

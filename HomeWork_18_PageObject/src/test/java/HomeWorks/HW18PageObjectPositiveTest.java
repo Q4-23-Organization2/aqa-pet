@@ -1,14 +1,9 @@
 package HomeWorks;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
-
-import static HomeWorks.WaitUtils.waitUtilVisibility;
 
 public class HW18PageObjectPositiveTest extends HW18PageObjectCommonConditions {
 
@@ -17,8 +12,10 @@ public class HW18PageObjectPositiveTest extends HW18PageObjectCommonConditions {
 
         logger.info("Running Test with Correct Data...");
         driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
-        waitUtilVisibility(driver, Duration.ofSeconds(5),
-                By.xpath("//button[contains(text(),'Sign In')]"));
+
+        WebElement signUpButton = wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.xpath("//button[contains(text(),'Sign In')]")));
+        signUpButton.click();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated
                 (By.xpath("//input[@id='signinEmail']")));
@@ -30,6 +27,10 @@ public class HW18PageObjectPositiveTest extends HW18PageObjectCommonConditions {
                 .click();
         driver.findElement(By.xpath("//button[contains(text(),'Login')]"))
                 .click();
-        logger.info("You have entered the correct email and password!");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.xpath("//h1[contains(text(),'Garage')]")));
+
+        logger.info("You have successfully logged in \n and went to the Garage page!");
     }
 }
