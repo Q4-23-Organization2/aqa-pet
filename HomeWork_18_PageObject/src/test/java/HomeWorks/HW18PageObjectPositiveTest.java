@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
+import static HomeWorks.WaitUtils.waitUtilVisibility;
+
 public class HW18PageObjectPositiveTest extends HW18PageObjectCommonConditions {
 
     @Test
@@ -15,11 +17,8 @@ public class HW18PageObjectPositiveTest extends HW18PageObjectCommonConditions {
 
         logger.info("Running Test with Correct Data...");
         driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
-
-
-        WebElement signUpButton = wait.until(ExpectedConditions.visibilityOfElementLocated
-                (By.xpath("//button[contains(text(),'Sign In')]")));
-        signUpButton.click();
+        waitUtilVisibility(driver, Duration.ofSeconds(5),
+                By.xpath("//button[contains(text(),'Sign In')]"));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated
                 (By.xpath("//input[@id='signinEmail']")));
