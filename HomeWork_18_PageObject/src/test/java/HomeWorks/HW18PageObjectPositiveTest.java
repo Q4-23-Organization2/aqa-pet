@@ -11,7 +11,7 @@ public class HW18PageObjectPositiveTest extends HW18PageObjectCommonConditions {
     public void TestWithCorrectData() {
 
         logger.info("Running Test with Correct Data...");
-        driver.get("https://the-internet.herokuapp.com/login");
+        driver.get("https://guest:welcome2qauto@qauto.forstudy.space");
 
         driver.findElement(By.xpath("//input[@id='username']"))
                 .sendKeys("tomsmith");
