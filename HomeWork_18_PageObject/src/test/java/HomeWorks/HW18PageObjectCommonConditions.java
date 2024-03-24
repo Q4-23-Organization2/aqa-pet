@@ -19,6 +19,7 @@ import java.time.Duration;
 
 public class HW18PageObjectCommonConditions {
     protected WebDriver driver;
+    protected WebDriverWait wait;
     protected static final Logger logger = (Logger) LogManager.getLogger(HW18PageObjectCommonConditions.class);
 
     @BeforeMethod
@@ -27,13 +28,13 @@ public class HW18PageObjectCommonConditions {
         options.addArguments("--disable-extensions");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    @AfterMethod
+/*    @AfterMethod
     public void closeDriver (){
         if(driver != null) {
             driver.quit();
         }
-    }
+    }*/
 }
