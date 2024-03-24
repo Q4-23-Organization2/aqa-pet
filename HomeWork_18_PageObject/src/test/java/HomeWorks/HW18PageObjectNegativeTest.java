@@ -1,29 +1,36 @@
 package HomeWorks;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 public class HW18PageObjectNegativeTest extends HW18PageObjectCommonConditions {
 
     @Test
-    public void TestWithIncorrectData() {
+    public void TestWithCorrectData() {
 
-        logger.info("Running Test with Incorrect Data...");
-        driver.get("https://the-internet.herokuapp.com/login");
+        logger.info("Running Test with Correct Data...");
+        driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
 
-        driver.findElement(By.xpath("//input[@id='username']"))
-                .sendKeys("IncorrectUserName");
-        driver.findElement(By.xpath("//input[@id='password']"))
-                .sendKeys("IncorrectPassword!");
-        driver.findElement(By.xpath("//button[@class='radius']"))
+        WebElement signUpButton = wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.xpath("//button[contains(text(),'Sign In')]")));
+        signUpButton.click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.xpath("//input[@id='signinEmail']")));
+        driver.findElement(By.xpath("//input[@id='signinEmail']"))
+                .sendKeys("stanislavk@nayax.comm");
+        driver.findElement(By.xpath("//input[@id='signinPassword']"))
+                .sendKeys("1qaz!!QQAAZZ");
+        driver.findElement(By.xpath("//input[@id='remember']"))
+                .click();
+        driver.findElement(By.xpath("//button[contains(text(),'Login')]"))
                 .click();
 
-        WebElement el = driver.findElement(By.xpath("//div[@id='flash']"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated
+                (By.xpath("//p[contains(text(),'Wrong email or password')]")));
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        String str = js.executeScript("return arguments[0].firstChild.textContent", el).toString();
-        logger.error(str + "You entered an incorrect login or password!");
+        logger.info("You have entered an incorrect login or password!");
     }
 }
