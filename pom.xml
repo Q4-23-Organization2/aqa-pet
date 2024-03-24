@@ -13,6 +13,7 @@
         <module>HomeWork_16</module>
         <module>HomeWork_17_SeleniumWD_Basic</module>
         <module>HomeWork_18_PageObject</module>
+        <module>HomeWork_19_PageFactory</module>
     </modules>
 
     <properties>
